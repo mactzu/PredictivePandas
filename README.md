@@ -1,4 +1,5 @@
-<!-- PredictivePandas -->
+# Predictive Pandas
+Predictive Pandas
 
 <!---Project Logo -->
 <br />
