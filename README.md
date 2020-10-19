@@ -1,11 +1,12 @@
-# Predictive Pandas
-
+<!-- PredictivePandas -->
+## PredictivePandas
 
 <!---Project Logo -->
 <br />
 <p align="center">
+   The Beer Project  
   <a href=>
-    <img src="" alt="Logo" width="200" height="200">
+    <img src="https://gifimage.net/wp-content/uploads/2017/09/animated-beer-gif-3.gif" alt="Logo" width="200" height="200">
   </a>
 
   <h3 align="center"></h3>
@@ -64,5 +65,9 @@
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
+Data sourced from:
+* [https://data.world/socialmediadata/beeradvocate#](https://data.world/socialmediadata/beeradvocate#)
+
+Additional resources:
 * [Top 50 matplotlib Visualisations - The Master Plots (with full python code)](https://www.machinelearningplus.com/plots/top-50-matplotlib-visualizations-the-master-plots-python/)
 * [Best-README-Template](https://github.com/HockingM/Best-README-Template/edit/master/README.md)
