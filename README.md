@@ -5,7 +5,7 @@
 <br />
 <p align="center">
 
-  <a href=https://github.com/mactzu/PredictivePandas"
+  <a href=https://github.com/mactzu/PredictivePandas">
     <img src="images/animated-beer-gif-3.gif" alt="Logo" width="200" height="200">
   </a>
 
