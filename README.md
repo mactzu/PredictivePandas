@@ -1,7 +1,6 @@
 <!-- PredictivePandas -->
 ## PredictivePandas
 
-
 <!---Project Logo -->
 <br />
 <p align="center">
