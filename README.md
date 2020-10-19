@@ -1,16 +1,16 @@
 <!-- PredictivePandas -->
-## PredictivePandas
+# PredictivePandas
 
 
 <!---Project Logo -->
 <br />
 <p align="center">
-   The Beer Project  
+
   <a href=>
     <img src="https://gifimage.net/wp-content/uploads/2017/09/animated-beer-gif-3.gif" alt="Logo" width="200" height="200">
   </a>
 
-  <h3 align="center"></h3>
+  <h3 align="center">The Beer Project</h3>
   <p align="center">
     Demystifying Machine Learning
     <br />
