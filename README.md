@@ -22,6 +22,7 @@
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
+* [Usage Example](#usage)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
@@ -29,9 +30,16 @@
 * [Acknowledgements](#acknowledgements)
 
 
+<!-- USAGE EXAMPLE -->
+## Usage
+
+
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+
+
+
 
 ### Built With
 * [Python](https://www.python.org/about/)
@@ -42,7 +50,7 @@
    * [Streamlit](https://www.streamlit.io/)
    * [wordcloud 1.8.0](https://pypi.org/project/wordcloud/)
    * [seaborn](http://seaborn.pydata.org/index.html)
-   * [Beautiful Soup]https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+   * [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 
 
 <!-- GETTING STARTED -->
