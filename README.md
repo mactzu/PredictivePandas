@@ -22,6 +22,7 @@
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
+* [Usage Example](#usage)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
@@ -29,13 +30,27 @@
 * [Acknowledgements](#acknowledgements)
 
 
+<!-- USAGE EXAMPLE -->
+## Usage
+
+
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+
+
+
 ### Built With
-* [pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/index.html)
-* [matplotlib](https://matplotlib.org/)
+* [Python](https://www.python.org/about/)
+   * [pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/index.html)
+   * [matplotlib](https://matplotlib.org/)
+   * [scikit-learn 0.23.2](https://scikit-learn.org/stable/user_guide.html)
+   * [NumPy](https://numpy.org/)
+   * [Streamlit](https://www.streamlit.io/)
+   * [wordcloud 1.8.0](https://pypi.org/project/wordcloud/)
+   * [seaborn](http://seaborn.pydata.org/index.html)
+   * [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 
 
 <!-- GETTING STARTED -->
