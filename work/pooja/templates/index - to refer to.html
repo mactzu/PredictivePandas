@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link rel="icon" type="image/vnd.microsoft.icon" href="/apps/settings/wcm/designs/tourismaustralia/favicon.ico">
-    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/apps/settings/wcm/designs/tourismaustralia/favicon.ico"> -->
     <title>Beer recommender</title>
+
 
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -21,33 +20,31 @@
     <link rel="stylesheet" href="static/landing_page/css/style.css">
 </head>
 
-
 <body>
 
+    <!-- Main Input For Receiving Query to our ML -->
+    <form id="form" action="{{ url_for('predict')}}" method="POST"> <!--submit will redirect to /predict as per flask-->
+        
+        <div class="form-group">
+            <label for="somevalue" class="somevalue">somevalue</label>
+            <select class="form-control" id="somevalue" name="somevalue">
+                <option value="lager">lager</option> <!--'value' can be fed back into flask -->
+                <option value="ale">ale</option>
+                <option value="poison">poison</option>  
+            </select>
+            <label for="someotherval" class="someotherval">someotherval</label>
+            <select class="form-control" id="someotherval" name="someotherval">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+            </select>
+        </div>
 
-    <!-- <div class = "container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-              <ul class="nav nav-tabs">
-                <li class="nav-item">
-                  <a class="nav-link active" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/dashboard">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/data">Data</a>
-                </li>
-              </ul>
-      
-              <div class="jumbotron text-center">
-                <h1>Victoria Threatened Species Map</h1>
-                <p>Use the interactive map below to explore the dataset</p>
-              </div>
-            </div>
-          </div>
-    </div> -->
-
+        <button id="filter-btn" type="submit" class="btn btn-default">SUBMIT</button>
+    </form>
+    <!-- value from prediction will feed back into {{ prediction_text }} -->
+    <p>We recommend beer {{ prediction_text }}</p>
+    
     <!-- Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
@@ -64,5 +61,4 @@
     
     <!-- our JavaScript -->
     <script type="text/javascript" src="static/landing_page/js/logic.js"></script>
-
 </body>
