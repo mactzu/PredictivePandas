@@ -28,9 +28,10 @@
         body, html {
           height: 100%;
           margin: 0;
+
         }
 
-        .container-fluid {
+        #header-image {
             padding: 0;
             height: 100%;
         }
@@ -118,6 +119,11 @@
             margin-top: -15%;
         }
 
+        .container-fluid {
+            height: 100%;
+            margin-top: 20%;
+        }
+
         
 
 
@@ -164,13 +170,16 @@
         }
 
 
+
+
+
         </style> 
 </head>
 
 <body>
 
 
-<div class = "container-fluid">
+<div class = "container-fluid" id= "header-image">
     <div class="hero-image">
         <img class = "responsive" src = "../static/logo.png">
         <div class = "subheading text-center">Welcome to BeerNext !</div>
@@ -225,14 +234,22 @@
                     <p class = "text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>         
                 </div>
-            </div>    
+            </div>     
         </div>
 
-
-
+        <div class = "container-fluid bg-light">
+            <div class = "row">
+                <h1>SLIDERS WILL GO IN HERE</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
     </div>
 
 </section>
+
 
 
     <script>
