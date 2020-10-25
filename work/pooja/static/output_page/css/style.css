@@ -1,0 +1,33 @@
+body {
+  padding: 20px 120px 20px 120px;
+}
+
+
+.panel {
+  height: auto;
+}
+
+/* .well {
+  height: auto;
+} */
+
+/* #selDataset {
+  width: auto;
+} */
+
+.img-gallery img {
+  height: 345px;
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h6 {
+  text-align: center;
+  font-style: italic;
+}
+
+
+
+
