@@ -35,6 +35,11 @@
             padding: 0;
             height: 100%;
         }
+
+        #intro {
+            margin-top: 5%;
+            height: 100%;
+        }
         
         .hero-image {
           background-image: url("https://images.unsplash.com/photo-1527443631444-cfeaa17b56fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1203&q=80");
@@ -87,31 +92,87 @@
             color:rgb(240, 228, 181);
         } 
 
+        .page-section h2.section-heading {
+            font-size: 5rem;
+            font-family: "Cinzel";
+        }
+
+        .page-section h3.section-subheading {
+            font-size: 3rem;
+            font-weight: 400;
+            font-style: italic;
+            font-family: "Droid Serif";
+            margin-top: 2%;
+        }
+
+        .container.text-center, p {
+            margin-top: 2%;
+            font-size: 20px;
+            font-family: "Droid Serif";
+        }
+
+        img {
+            margin-top: -15%;
+        }
+
+        
+
+
         @media screen and (min-width: 601px) {
             .subheading {
                 font-size: 60px;
             }
+            .subheading-1 {
+                font-size: 30px;
+            }
+            .btn {
+                font-size: 40px;
+            }
         }
 
         @media screen and (max-width: 750px) {
             .subheading {
                 font-size: 40px;
             }
-        }
-
-        @media screen and (min-width: 601px) {
-            .subheading-1 {
-                font-size: 30px;
-            }
-        }
-
-        @media screen and (max-width: 750px) {
             .subheading-1 {
                 font-size: 25px;
             }
+            .btn {
+                font-size: 30px;
+            }
+
         }
 
-        @media screen and (min-width: 601px) {
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            margin-top: 30%;
+        }
+
+        .text-muted {
+            margin-top: -20%;
+        }
+
+
+
+
+
+
+
+        /* @media screen and (min-width: 601px) {
+            .subheading-1 {
+                font-size: 30px;
+            }
+        } */
+
+        /* @media screen and (max-width: 750px) {
+            .subheading-1 {
+                font-size: 25px;
+            }
+        } */
+
+        /* @media screen and (min-width: 601px) {
             .btn {
                 font-size: 40px;
             }
@@ -121,7 +182,7 @@
             .btn {
                 font-size: 30px;
             }
-        }
+        } */
 
 
         </style> 
@@ -141,7 +202,67 @@
     </div>
 </div>
 
-<div class = "container-fluid text-center" id = "intro">
+<section class = "page-section" id = "intro">
+    <div class = "container">
+        <div class = "text-center">
+            <h2 class = "section-heading">What is BeerNext?</h2>
+            <hr>
+            <!-- <h3 class = "section-subheading text-muted">How our recommender works</h3> -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+                ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <div class = "flex-container">
+            <div class = "row text-center">
+                <div class = "col-md-6 text-center">
+                    <!-- <h4 class = "feature">Taste</h4> -->
+                    <img src = "../static/taste.png" class = "img-responsive" style = "max-width:100%">  
+                    <p class = "text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>         
+                </div>
+
+                <div class = "col-md-6 text-center">
+                    <!-- <h4 class = "feature">Palate</h4> -->
+                    <img src = "../static/palate.png" class = "img-responsive" style = "max-width:100%">                    
+                    <p class = "text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>    
+                </div>
+
+                <div class = "col-md-6 text-center">
+                    <!-- <h4 class = "feature">Aroma</h4> -->
+                    <img src = "../static/aroma.png" class = "img-responsive" style = "max-width:100%">  
+                    <p class = "text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>         
+                </div>
+
+                <div class = "col-md-6 text-center">
+                    <!-- <h4 class = "feature">Look</h4> -->
+                    <img src = "../static/look.png" class = "img-responsive" style = "max-width:100%"> 
+                    <p class = "text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>         
+                </div>
+            </div>    
+        </div>
+
+
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- <div class = "container-fluid text-center" id = "intro">
+
     <div class = "row content">
         <div class = "col sm-8 text-center">
             <h1>How this recommender works!</h1>
@@ -153,7 +274,7 @@
             <hr>
         </div>
     </div>
-</div> 
+</div>  -->
  
 
     <script>
