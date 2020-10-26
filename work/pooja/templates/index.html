@@ -38,7 +38,6 @@
 
         #intro {
             margin-top: 5%;
-            height: 100%;
         }
         
         .hero-image {
@@ -92,37 +91,65 @@
             color:rgb(240, 228, 181);
         } 
 
-        .page-section h2.section-heading {
+        .container-fluid {
+            height: 100%;
+            margin: 0;
+        } 
+    
+        /* What is BeerNext? */
+        .container#intro h2.section-heading {
             font-size: 5rem;
             font-family: "Cinzel";
         }
 
-        .text-center h2.subsection-heading {
+        /* BeerNext Intro Paragraph */
+        .container#intro.text-center, p {
+            margin-top: 2%;
+            font-size: 20px;
+            font-family: "Droid Serif";
+        }
+
+
+        /* DEALING WITH FLEX CONTAINERS */ 
+
+        .flex-container#features {
+            display:flex;
+            flex-wrap: wrap;
+            height: 100%;
+            margin-top: 10%;
+        }
+
+        .flex-container#features hr {
+            width: 100%;
+            margin: 0%;
+            align-self: stretch;
+        }
+
+        /* The Features of Beer Heading */
+        #features h2.subsection-heading {
             font-size: 5rem;
             font-family: "Cinzel";
             width: 100%;
         }
 
-        .container.text-center, p {
+        /* Features of Beer Paragraph */
+        #features.text-center.subsection-heading, p {
             margin-top: 2%;
             font-size: 20px;
             font-family: "Droid Serif";
         }
 
-        .text-center.subsection-heading, p {
-            margin-top: 2%;
-            font-size: 20px;
-            font-family: "Droid Serif";
+        /* Feature Explanation Paragraphs */
+        .text-muted {
+            margin-top: -20%;
         }
 
         img {
             margin-top: -15%;
         }
 
-        .container-fluid {
-            height: 100%;
-            margin-top: 20%;
-        }
+        
+
 
         
 
@@ -152,34 +179,13 @@
 
         }
 
-        .flex-container {
-            display:flex;
-            flex-wrap: wrap;
-            height: 100%;
-            margin-top: 10%;
-        }
-
-        hr {
-            width: 100%;
-            margin: 0%;
-            align-self: stretch;
-        }
-
-        .text-muted {
-            margin-top: -20%;
-        }
-
-
-
-
-
         </style> 
 </head>
 
 <body>
 
 
-<div class = "container-fluid" id= "header-image">
+<div class = "container-fluid">
     <div class="hero-image">
         <img class = "responsive" src = "../static/logo.png">
         <div class = "subheading text-center">Welcome to BeerNext !</div>
@@ -190,65 +196,65 @@
     </div>
 </div>
 
-<section class = "page-section" id = "intro">
-    <div class = "container">
-        <div class = "text-center">
-            <h2 class = "section-heading">What is BeerNext?</h2>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+
+<div class = "container" id = "intro">
+    <div class = "text-center">
+        <h2 class = "section-heading">What is BeerNext?</h2>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, 
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
                 ut aliquip ex ea commodo consequat.</p>        
-        </div>
-
-        <div class = "flex-container">
-            <div class = "row text-center">
-                <h2 class = "subsection-heading">The Features of Beer</h2>
-                <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                <div class = "col-md-6 text-center">
-                    <img src = "../static/taste.png" class = "img-responsive" style = "max-width:100%">  
-                    <p class = "text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>         
-                </div>
-
-                <div class = "col-md-6 text-center">
-                    <img src = "../static/palate.png" class = "img-responsive" style = "max-width:100%">                    
-                    <p class = "text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>    
-                </div>
-
-                <div class = "col-md-6 text-center">
-                    <img src = "../static/aroma.png" class = "img-responsive" style = "max-width:100%">  
-                    <p class = "text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>         
-                </div>
-
-                <div class = "col-md-6 text-center">
-                    <img src = "../static/look.png" class = "img-responsive" style = "max-width:100%"> 
-                    <p class = "text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>         
-                </div>
-            </div>     
-        </div>
-
-        <div class = "container-fluid bg-light">
-            <div class = "row">
-                <h1>SLIDERS WILL GO IN HERE</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-        </div>
     </div>
 
-</section>
+    <div class = "flex-container" id = "features">
+        <div class = "row text-center">
+            <h2 class = "subsection-heading">The Features of Beer</h2>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            </p>
+
+            <div class = "col-md-6 text-center">
+                <img src = "../static/taste.png" class = "img-responsive" style = "max-width:100%">  
+                <p class = "text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>         
+            </div>
+                
+            <div class = "col-md-6 text-center">
+                <img src = "../static/palate.png" class = "img-responsive" style = "max-width:100%">                    
+                <p class = "text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>    
+            </div>
+
+            <div class = "col-md-6 text-center">
+                <img src = "../static/aroma.png" class = "img-responsive" style = "max-width:100%">  
+                <p class = "text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>         
+            </div>
+
+            <div class = "col-md-6 text-center">
+                <img src = "../static/look.png" class = "img-responsive" style = "max-width:100%"> 
+                <p class = "text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>         
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
