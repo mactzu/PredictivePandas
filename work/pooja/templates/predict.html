@@ -25,29 +25,6 @@
 </head>
 
 <body>
-
-    <!-- Main Input For Receiving Query to our ML -->
-    <form id="form" action="{{ url_for('predict')}}" method="POST"> <!--submit will redirect to /predict as per flask-->
-        
-        <div class="form-group">
-            <label for="somevalue" class="somevalue">somevalue</label>
-            <select class="form-control" id="somevalue" name="somevalue">
-                <option value="lager">lager</option> <!--'value' can be fed back into flask -->
-                <option value="ale">ale</option>
-                <option value="poison">poison</option>  
-            </select>
-            <label for="someotherval" class="someotherval">someotherval</label>
-            <select class="form-control" id="someotherval" name="someotherval">
-                <option value=1>1</option>
-                <option value=2>2</option>
-                <option value=3>3</option>
-            </select>
-        </div>
-
-        <button id="filter-btn" type="submit" class="btn btn-default">SUBMIT</button>
-    </form>
-    <!-- value from prediction will feed back into {{ prediction_text }} -->
-    <p>We recommend beer {{ prediction_text }}</p>
     
     <!-- Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"

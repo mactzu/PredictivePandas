@@ -1,19 +1,260 @@
-/* body {
-  padding: 20px 120px 20px 120px;
+
+body, html {
+  scroll-behavior: smooth;
+  height: 100%;
+
 }
 
-#map {
+
+.container-fluid {
+    height: 100%;
+    margin: 0;
+} 
+
+
+/* HERO IMAGE  */
+
+.hero-image {
+  background-image: url("https://images.unsplash.com/photo-1529877612930-6e7df7e2b02f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
-  border-radius: 2px;
-  height: 700px;
-  width: 100%;  /* This means "100% of the width of its container", the .col-md-8 */
 }
 
-h4 {
-  color: #003366;
-  padding: 0 20px 20px 20px;
-  text-align: center;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-style: italic;
-} */
+/* Logo */
+.responsive {
+    display: block;
+    position: relative;
+    margin: auto;
+}
 
+/* Hero Text Headings */
+.subheading {
+    line-height: 50px;
+    top: 65%;
+    margin-bottom: 30px;
+    font-family: "Cinzel";
+    color:rgb(240, 228, 181);
+}
+
+.subheading-1 {
+    font-size: 30px;
+    line-height: 10px;
+    font-family: "Cinzel";
+    color:rgb(240, 228, 181);
+} 
+
+/* About Button */
+
+.btn {
+    border: none;
+    text-align: center;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(246, 152, 39);
+    font-family: "Cinzel";
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 4px;
+    display: inline-block;
+    color:  rgb(240, 228, 181);
+}
+
+.btn:hover {background: rgb(240, 228, 181)} 
+
+/* ABOUT SECTION */
+#about {
+    margin-top: 5%;
+}
+
+/* What is BeerNext? */
+#about h2.section-heading {
+    font-size: 5rem;
+    font-family: "Cinzel";
+}
+
+/* BeerNext Intro Paragraph */
+p {
+    margin-top: 2%;
+    font-size: 25px;
+    font-family: "Droid Serif";
+}
+
+
+/* DEALING WITH FLEX CONTAINERS */ 
+
+.flex-container#features {
+    display:flex;
+    flex-wrap: wrap;
+    height: 100%;
+    margin-top: 10%;
+}
+
+.flex-container#features hr {
+    width: 100%;
+    margin: 0%;
+    align-self: stretch;
+}
+
+/* The Features of Beer Heading */
+#features h2.subsection-heading {
+    font-size: 5rem;
+    font-family: "Cinzel";
+    width: 100%;
+}
+
+/* Features of Beer Paragraph */
+#features.text-center.subsection-heading, p {
+    margin-top: 2%;
+    font-size: 25px;
+    font-family: "Droid Serif";
+}
+
+/* Feature Explanation Paragraphs */
+.text-muted {
+    margin-top: -20%;
+}
+
+img {
+    margin-top: -15%;
+}
+
+/* PREFERENCE RANGE SLIDERS SECTION */
+
+.container-fluid#sliders {
+    width: 100%;
+    height: 100%;
+    margin-top: 8%;
+}
+
+.container-fluid.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.container-fluid.flex-container#sliders hr {
+    width: 100%;
+    margin: 0%;
+    align-self: stretch;
+}
+
+/* Your Preferences Heading */
+.flex-container h2.subsection-heading-1 {
+    font-size: 5rem;
+    font-family: "Cinzel";
+    width: 100%;
+    margin-top: 5%;
+    
+}
+
+/* SLIDER */
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 150px;
+    height: 150px;
+    border: 0;
+    background-image: url("../../slider.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 150px;
+    height: 150px;
+    border: 0;
+    background: url("../../slider.png");
+    cursor: pointer;
+}
+
+
+.slidecontainer {
+    width: 100%;
+}
+
+.slidecontainer, p{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+input[type = "range"] {
+    width: 1000px;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+}
+
+input[type = "image"] {
+    max-width: 100%;
+    height: auto;
+    margin-left: 25%;
+    display: block;
+    position: relative;
+    margin: auto;
+    border: none;
+    outline: none;
+    margin-top: 0%;
+}
+
+
+
+
+/* Media Queries */
+@media screen and (min-width: 601px) {
+    .subheading {
+        font-size: 63px;
+    }
+    .subheading-1 {
+        font-size: 30px;
+    }
+    .btn {
+        font-size: 40px;
+    }
+    /* .container-fluid#sliders {
+        margin-top: 5%;
+    }
+    .container#about {
+        margin-bottom: 5%;
+    } */
+}
+
+@media screen and (max-width: 800px) {
+    .subheading {
+        font-size: 40px;
+    }
+    .subheading-1 {
+        font-size: 25px;
+    }
+    .btn {
+        font-size: 30px;
+    }
+
+    input[type = "range"] {
+        width: 550px;
+        margin-top: 15%;
+    }
+}
