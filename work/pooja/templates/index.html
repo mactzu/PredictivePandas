@@ -2,16 +2,20 @@
 <html lang="en">
 
 <head>
+
     <title>Beer Recommender</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="../static/favicon.png" />
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -39,7 +43,7 @@
         } 
         
         .hero-image {
-          background-image: url("https://images.unsplash.com/photo-1527443631444-cfeaa17b56fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1203&q=80");
+          background-image: url("https://images.unsplash.com/photo-1529877612930-6e7df7e2b02f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
           height: 100%;
           background-position: center;
           background-repeat: no-repeat;
@@ -74,8 +78,7 @@
         
 
         .subheading {
-            font-size: 60px;
-            line-height: 40px;
+            line-height: 50px;
             top: 65%;
             margin-bottom: 30px;
             font-family: "Cinzel";
@@ -155,6 +158,7 @@
 
         .container-fluid#sliders {
             width: 100%;
+            height: 100%;
             margin-top: 8%;
         }
 
@@ -215,19 +219,6 @@
         }
 
 
-        /* .slider {
-            -webkit-appearance: none;
-            width: 100%;
-            height: 15px;
-            border-radius: 5px;
-            background: #d3d3d3;
-            outline: none;
-            opacity: 0.7;
-            -webkit-transition: .2s;
-            transition: opacity .2s;
-            margin-top: 10%;
-            } */
-
         .slidecontainer {
             width: 100%;
         }
@@ -239,40 +230,34 @@
 
         .slider:hover {
             opacity: 1;
-            }
-
-        /* .slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            background:rgb(246, 152, 39);
-            cursor: pointer;
-            }
-
-        .slider::-moz-range-thumb {
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            background: rgb(246, 152, 39);
-            cursor: pointer;
-            } */
+        }
 
         input[type = "range"] {
             width: 800px;
             margin: auto;
             display: block;
-            margin-top: 10%;
-
+            margin-top: 5%;
         }
+
+        input[type = "image"] {
+            max-width: 100%;
+            height: auto;
+            margin-left: 25%;
+            display: block;
+            position: relative;
+            margin: auto;
+            border: none;
+            outline: none;
+            margin-top: 0%;
+        }
+
 
 
 
         /* Media Queries */
         @media screen and (min-width: 601px) {
             .subheading {
-                font-size: 60px;
+                font-size: 63px;
             }
             .subheading-1 {
                 font-size: 30px;
@@ -280,9 +265,15 @@
             .btn {
                 font-size: 40px;
             }
+            .container-fluid#sliders {
+                margin-top: 5%;
+            }
+            .container#intro {
+                margin-bottom: 5%;
+            }
         }
 
-        @media screen and (max-width: 750px) {
+        @media screen and (max-width: 800px) {
             .subheading {
                 font-size: 40px;
             }
@@ -295,8 +286,8 @@
 
             input[type = "range"] {
                 width: 550px;
+                margin-top: 15%;
             }
-
         }
 
         </style> 
@@ -308,8 +299,8 @@
 <div class = "container-fluid">
     <div class="hero-image">
         <img class = "responsive" src = "../static/logo.png">
-        <div class = "subheading text-center">Welcome to BeerNext !</div>
-        <div class = "subheading-1 text-center">Your very own beer recommender</div>
+        <div class = "subheading text-center">Welcome to BeerNext</div>
+        <div class = "subheading-1 text-center">A beer recommender powered by Machine Learning</div>
         <div class = "hero-text">
             <a class = "btn js-scroll-trigger" href = "#intro">Find Out More</a>
         </div>
@@ -374,13 +365,23 @@
     <div class = "slidecontainer">
         <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
         <p>Value: <span id="demo"></span></p>
+        <br>
         <input type="range" min="1" max="100" value="50" class="slider" id="myRange1">
         <p>Value: <span id="demo1"></span></p>
+        <br>
         <input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
         <p>Value: <span id="demo2"></span></p>
+        <br>
         <input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
         <p>Value: <span id="demo3"></span></p>
     </div>
+
+    <div class = "flex-container bg-light">
+        <div class = "row text-center">
+            <input type = "image" src = "../static/button.png" name = "saveForm" class = "submit" id = "saveForm"/> 
+        </div>
+    </div>
+
 </div>
 
     <script>
@@ -436,7 +437,14 @@
             output3.innerHTML = this.value;
         }
 
+        document.getElementById("saveForm").onclick = function() {
+            location.href = "/predict"
+        }
+
+
     </script>
+
+
 
     <!-- Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
