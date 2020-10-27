@@ -6,7 +6,7 @@ var beerIcon = L.icon ({
   iconSize: [75, 75]
 })
 var myMap = L.map("map").setView([45, -5], 2);
-var myFeatureGroup = L.featureGroup().addTo(myMap);
+var myFeatureBeers = L.featureGroup().addTo(myMap);
 var marker, test;
 
 
@@ -22,11 +22,11 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
   }).addTo(myMap);
 
 function getBeer() {
-  myFeatureGroup.clearLayers();
+  myFeatureBeers.clearLayers();
 
   for (var i = 0; i < 5; i += 1) {
     test = "test " + i;
-    marker = L.marker(getRandomLatLng(),{icon: beerIcon}).addTo(myFeatureGroup).bindPopup("Marker " + test);
+    marker = L.marker(getRandomLatLng(),{icon: beerIcon}).addTo(myFeatureBeers).bindPopup("Marker " + test);
     marker.test = test;
   }
 
@@ -37,7 +37,7 @@ function getBeer() {
     ]
   }  
 
-  myMap.fitBounds(myFeatureGroup.getBounds());
+  myMap.fitBounds(myFeatureBeers.getBounds());
 
 }
 
