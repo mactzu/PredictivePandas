@@ -5,7 +5,7 @@ var beerIcon = L.icon ({
   iconUrl: 'http://feedus.media/wp/wp-content/uploads/leaflet-maps-marker-icons/beer_pin-2.png',
   iconSize: [75, 75]
 })
-var myMap = L.map("map").setView([39.82, -98.57], 4);
+var myMap = L.map("map").setView([45, -5], 2);
 var myFeatureGroup = L.featureGroup().addTo(myMap);
 var marker, test;
 
@@ -32,11 +32,12 @@ function getBeer() {
 
   function getRandomLatLng() {
     return [
-      39.82 + 20 * Math.random() - 8,
-      -98.57 + 20 * Math.random() - 8
+      45 + 60 * Math.random() - 25,
+      -30 + 100 * Math.random() - 50
     ]
   }  
 
+  myMap.fitBounds(myFeatureGroup.getBounds());
 
 }
 
