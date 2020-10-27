@@ -11,6 +11,10 @@ body, html {
     margin: 0;
 } 
 
+.container-fluid {
+    height: 100%;
+    margin: 0;
+} 
 
 /* HERO IMAGE  */
 
@@ -91,7 +95,7 @@ p {
     display:flex;
     flex-wrap: wrap;
     height: 100%;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .flex-container#features hr {
@@ -123,43 +127,85 @@ img {
     margin-top: -15%;
 }
 
-/* PREFERENCE RANGE SLIDERS SECTION */
-
-.container-fluid#sliders {
-    width: 100%;
-    height: 100%;
-    margin-top: 8%;
-}
+/* PREFERENCE SECTION */
 
 .container-fluid.flex-container {
     display: flex;
     flex-wrap: wrap;
-    height: 100%;
+    text-align: center;
 }
 
-.container-fluid.flex-container#sliders hr {
-    width: 100%;
-    margin: 0%;
-    align-self: stretch;
+.container-fluid#preferences {
+    margin-top: 5%;
 }
 
-/* Your Preferences Heading */
 .flex-container h2.subsection-heading-1 {
     font-size: 5rem;
     font-family: "Cinzel";
     width: 100%;
     margin-top: 5%;
+}
+
+
+.flex-container h3.subsection-heading-2 {
+    font-size: 3.5rem;
+    font-family: "Cinzel";
+    margin-left: 5.6%;
+    margin-top: 3%;
+}
+
+#form {
+    margin-top: 5%;
+    width: 70%;
+    margin-left: 10%;
     
 }
+
+input[type=text] {
+    background-color: #f0e4b5;
+    font-size: 20px;
+  }
+
+::-webkit-input-placeholder {
+
+    font-size: 18px;
+  }
+  ::-moz-placeholder {
+   
+    font-size: 18px;
+  }
+  :-ms-input-placeholder {
+ 
+    font-size: 18px;
+  }
+  ::placeholder {
+
+    font-size: 18px;
+  }
+
+input.form-control {
+    width: 100%;
+    padding: 20px 40px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border-color: #f0e4b5;
+  }
+
+  label {
+      font-family: "Cinzel";
+      font-size: 20px;
+      font-weight: lighter;
+  }
+
 
 /* SLIDER */
 
 .slider {
     -webkit-appearance: none;
-    width: 100%;
+    max-width: 70%;
     height: 15px;
     border-radius: 5px;
-    background: #d3d3d3;
+    background: #f0e4b5;
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;
@@ -218,7 +264,7 @@ input[type = "image"] {
     border: none;
     outline: none;
     margin-top: 0%;
-}
+} 
 
 
 
@@ -242,12 +288,12 @@ input[type = "image"] {
     } */
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .subheading {
         font-size: 40px;
     }
     .subheading-1 {
-        font-size: 25px;
+        font-size: 15px;
     }
     .btn {
         font-size: 30px;
