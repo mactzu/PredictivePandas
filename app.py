@@ -137,13 +137,13 @@ def predict():
 
     country="USA"
     beer_strength="Full"
-    overall=4 #nt needed
+    overall=4 #not needed
     aroma=3
     appearance=5
-    palate=2 #nt needed
+    palate=2 #not needed
     taste=5
     beer_style="bitter"
-    words=["carbonation","malty","sweet"] #to remove
+    words=["carbonation","malty","sweet"] #to remove hardcoding
 
     # data manipulation, don't change
     # not user input
