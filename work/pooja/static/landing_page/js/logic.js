@@ -30,3 +30,42 @@ slider.oninput = function() {
 //     location.href = "/predict"
 // }
 
+
+
+
+
+
+
+
+
+
+
+
+
+// $(function(){
+//     var feature_words = [
+//         'cow',
+//         'goat',
+//         'pig',
+//         'snake',
+//         'hamster',
+//         'elephant',
+//         'lion',
+//         'tiger',
+//         'monkey',
+//         'lizard',
+//         'bird',
+//         'crocodile',
+//         'gazelle',
+//         'antelope'
+//     ];
+
+//     $(".tags_input").tagComplete({
+
+//                 keylimit: 1,
+//                 hide: false,
+//                 autocomplete: {
+//                     data: datac
+//                 }
+//         });
+// });
