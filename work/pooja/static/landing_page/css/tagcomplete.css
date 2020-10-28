@@ -28,11 +28,11 @@
   -webkit-border-radius: 5;
   -moz-border-radius: 5;
   border-radius: 5px;
-  font-family: Arial;
+  font-family: "Cinzel";
   color: #455a64;
-  font-size: 16px;
+  font-size: 18px;
   background: #dee1e2;
-  padding: 6px 6px 6px 8px;
+  padding: 4px 4px 4px 10px;
   text-decoration: none;
   margin:2px;
   display:inline-block;
@@ -43,7 +43,8 @@
 }
 
 .tag_complete .tags_container .tag .close:after{
-	font-size:18px;
+	font-size: 20px;
+	float: right;
 	padding:2px 4px 2px 4px;
 	background:#bcbcbc;
 	border:1px solid #bcbcbc;
@@ -61,10 +62,10 @@
 .tag_complete_main .autocomplete:not(.hide){
 	list-style: none;
 	padding: 8px;
-	background:#fcfdff;
+	background:#dd953f;
 	display:block;
 	position:relative;
-	border:1px solid #b0bec5;
+	border:1px solid #dd953f;
 	border-top:0;
 	z-index:1000000 !important;
 	margin:0px;

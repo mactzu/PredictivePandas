@@ -83,21 +83,6 @@ a#pref-button {
     align-items: center;
 }
 
-/* 
-.flex-container#pref-button{
-    background-color: rgb(246, 152, 39);
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    font-family: "Cinzel";
-    font-size: 30px;
-    align-items: center;
-
-} */
-
 #pref-button.btn:hover {
     background: rgb(240, 228, 181);
 }
@@ -107,7 +92,7 @@ a#pref-button {
 
 /* What is BeerNext? */
 #about h2.section-heading {
-    font-size: 5rem;
+    font-size: 3rem;
     font-family: "Cinzel";
     margin-top: 5%;
 }
@@ -137,7 +122,7 @@ a#pref-button {
 
 /* The Features of Beer Heading */
 #features h2.subsection-heading {
-    font-size: 5rem;
+    font-size: 3rem;
     font-family: "Cinzel";
     width: 100%;
 }
@@ -172,7 +157,7 @@ img {
 }
 
 .flex-container h2.subsection-heading-1 {
-    font-size: 5rem;
+    font-size: 3rem;
     font-family: "Cinzel";
     width: 100%;
     margin-top: 0%;
@@ -180,7 +165,7 @@ img {
 
 
 .flex-container h3.subsection-heading-2 {
-    font-size: 3.5rem;
+    font-size: 1.8rem;
     font-family: "Cinzel";
     margin-left: 0.7%;
     margin-top: 3%;
@@ -249,6 +234,7 @@ form.row {
     margin-left: 20%;
 } */
 
+/*taste tag input*/
 
 
 input[type=text] {

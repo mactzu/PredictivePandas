@@ -25,36 +25,8 @@ slider.oninput = function() {
     output.innerHTML = this.value;
     }
 
-var slider1 = document.getElementById("myRange1");
-var output1 = document.getElementById("demo1");
-output1.innerHTML = slider.value;
 
-slider1.oninput = function() {
-    output1.innerHTML = this.value;
-    }
-
-var slider2 = document.getElementById("myRange2");
-var output2 = document.getElementById("demo2");
-output2.innerHTML = slider.value;
-
-slider2.oninput = function() {
-    output2.innerHTML = this.value;
-    }
-
-var slider3 = document.getElementById("myRange3");
-var output3 = document.getElementById("demo3");
-output3.innerHTML = slider.value;
-
-slider3.oninput = function() {
-    output3.innerHTML = this.value;
-}
-
-document.getElementById("saveForm").onclick = function() {
-    location.href = "/predict"
-}
-
-
-
-
-
+// document.getElementById("saveForm").onclick = function() {
+//     location.href = "/predict"
+// }
 
