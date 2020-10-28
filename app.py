@@ -11,6 +11,7 @@ from flask import (
 #from sqlalchemy import create_engine
 #from sqlalchemy.sql import text
 import pandas as pd
+import numpy as np
 import joblib
 from sklearn.metrics.pairwise import linear_kernel
 
@@ -134,14 +135,15 @@ def predict():
     # beer_style=request.form['beerstyle']
     # words=["sweet","hay","toast","gentle","bubbly"] #to change
 
-    beer_strength="Mid"
-    overall=4
+    country="USA"
+    beer_strength="Full"
+    overall=4 #nt needed
     aroma=3
     appearance=5
-    palate=2
+    palate=2 #nt needed
     taste=5
     beer_style="bitter"
-    words=["sweet","hay","toast","gentle","bubbly"] #to remove
+    words=["carbonation","malty","sweet"] #to remove
 
     # data manipulation, don't change
     # not user input
@@ -160,7 +162,7 @@ def predict():
             beer_abv=beer_abv_all[i]
 
     beerdata=pd.read_csv("./data/beerlist_w_Kmean.csv")
-    numberof_reviews=beerdata["numberof_reviews"].mean()
+    numberof_reviews=beerdata["numberof_reviews"].median()
     
     # predict cluster
     userInput=np.array([[beer_abv,numberof_reviews,overall,aroma,
