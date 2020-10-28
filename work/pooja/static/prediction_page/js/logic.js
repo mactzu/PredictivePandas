@@ -1,4 +1,4 @@
-var API_KEY = "pk.eyJ1IjoicG1hbGxhcmQiLCJhIjoiY2tnc3B5eWc1MDI3NzJ4cHQ5anIwbnpoeCJ9.2LB0cYAMj8pOZ-QgyecGxA";
+var API_KEY = "";
 
 
 // Creating our initial map object

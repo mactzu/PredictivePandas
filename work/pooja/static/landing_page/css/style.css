@@ -59,41 +59,57 @@ body, html {
     top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(246, 152, 39);
+    background-color: #dd953f;
     font-family: "Cinzel";
     font-size: 30px;
     cursor: pointer;
     border-radius: 4px;
     display: inline-block;
-    color:  rgb(240, 228, 181);
+    color:  black;
 }
 
 #about-button.btn:hover {background: rgb(240, 228, 181)} 
 
 /* Preferences Button */
+a#pref-button {
+    margin-left: 172%;
+    margin-top: 20%;
+}
+
 #pref-button{
+    background-color: #dd953f;
+    font-family: "Cinzel";
+    font-size: 30px;
+    align-items: center;
+}
+
+/* 
+.flex-container#pref-button{
     background-color: rgb(246, 152, 39);
+    margin: 0;
     position: absolute;
-    left: 25%;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     font-family: "Cinzel";
     font-size: 30px;
     align-items: center;
 
-}
+} */
 
 #pref-button.btn:hover {
     background: rgb(240, 228, 181);
 }
 
 /* ABOUT SECTION */
-#about {
-    margin-top: 3%;
-}
+
 
 /* What is BeerNext? */
 #about h2.section-heading {
     font-size: 5rem;
     font-family: "Cinzel";
+    margin-top: 5%;
 }
 
 /* BeerNext Intro Paragraph */
@@ -159,7 +175,7 @@ img {
     font-size: 5rem;
     font-family: "Cinzel";
     width: 100%;
-    margin-top: 5%;
+    margin-top: 0%;
 }
 
 
@@ -375,4 +391,6 @@ input[type = "image"] {
         margin-top: 15%;
     }
 }
+
+
 
