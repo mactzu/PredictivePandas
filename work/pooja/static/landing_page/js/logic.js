@@ -23,14 +23,38 @@ output.innerHTML = slider.value;
 
 slider.oninput = function() {
     output.innerHTML = this.value;
-    }
+}
+
+var slider1 = document.getElementById("myRange1");
+var output1 = document.getElementById("demo1");
+output1.innerHTML = slider1.value;
+
+slider1.oninput = function() {
+    output1.innerHTML = this.value;
+}
+
+var slider2 = document.getElementById("myRange2");
+var output2 = document.getElementById("demo2");
+output2.innerHTML = slider2.value;
+
+slider2.oninput = function() {
+    output2.innerHTML = this.value;
+}
+
+
+
+// Drop down 
+var beer_strength = ["light", "mild", "full", "strong", "heavy"];
+
+
+
 
 
 // document.getElementById("saveForm").onclick = function() {
 //     location.href = "/predict"
 // }
 
-var country = [
+var countries = [
     "Argentina",
     "Armenia",
     "Australia",
@@ -44,7 +68,7 @@ var country = [
     "China",
     "Columbia",
     "Costa Rica",
-    "Czechia",
+    "Czech Republic",
     "Denmark",
     "Ethopia", 
     "Finland",
@@ -100,18 +124,9 @@ var country = [
     "Turks and Caicos Islands",
     "UK",
     "Ukraine",
-    "United States",
-    
-
-
-
-
-
-
-
-
-
-]
+    "USA",
+    "USVI"
+];
 
 var beer_style = [
     "pilsener",
@@ -345,14 +360,18 @@ var words = [
 
 
 $(function(){
-    var feature_words = words;
+
+    var data = beer_style.concat(countries, words);
 
     $(".tags_input").tagComplete({
 
                 keylimit: 1,
                 hide: false,
                 autocomplete: {
-                    data: feature_words
+                    data: data
                 }
         });
 });
+
+
+
