@@ -30,7 +30,102 @@ slider.oninput = function() {
 //     location.href = "/predict"
 // }
 
+var country = [
+    "Argentina",
+    "Armenia",
+    "Australia",
+    "Austria",
+    "Belgium",
+    "Bosnia and Herzegovina",
+    "Brazil",
+    "Bulgaria",
+    "Canada",
+    "Cayman Islands",
+    "China",
+    "Columbia",
+    "Costa Rica",
+    "Czechia",
+    "Denmark",
+    "Ethopia", 
+    "Finland",
+    "France",
+    "Georgia",
+    "Germany", 
+    "Greece",
+    "Hong Kong",
+    "India",
+    "Indian Ocean",
+    "Indonesia",
+    "Ireland",
+    "Israel",
+    "Italy",
+    "Jammu and Kashmir",
+    "Japan",
+    "Kenya",
+    "Latvia",
+    "Lebanon",
+    "Liechtenstein",
+    "Lithuania",
+    "Luxembourg",
+    "Madagascar",
+    "Maihama",
+    "Malaysia",
+    "Mexico",
+    "Monaco",
+    "Myanmar",
+    "Netherlands",
+    "New Zealand",
+    "Nigeria",
+    "North Macedonia",
+    "Norway",
+    "Palestine",
+    "Poland",
+    "Portugal",
+    "Puerto Rico",
+    "Romania",
+    "Russia",
+    "Singapore",
+    "Slovakia",
+    "South Africa",
+    "Spain",
+    "Sri Lanka",
+    "St Lucia",
+    "Suriname",
+    "Sweden",
+    "Switzerland",
+    "Tagus",
+    "Tanzania",
+    "The Bahamas",
+    "Trinidad and Tobago",
+    "Turks and Caicos Islands",
+    "UK",
+    "Ukraine",
+    "United States",
+    
 
+
+
+
+
+
+
+
+
+]
+
+var beer_style = [
+    "pilsener",
+    "lager",
+    "ale",
+    "kölsch",
+    "barleywine",
+    "bitter",
+    "exotic",
+    "ipa",
+    "porter",
+    "stout",
+    "trappist"
+];
 
 var words = [
 
