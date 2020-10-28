@@ -52,7 +52,7 @@ body, html {
 
 /* About Button */
 
-.btn {
+#about-button.btn {
     border: none;
     text-align: center;
     position: absolute;
@@ -68,11 +68,26 @@ body, html {
     color:  rgb(240, 228, 181);
 }
 
-.btn:hover {background: rgb(240, 228, 181)} 
+#about-button.btn:hover {background: rgb(240, 228, 181)} 
+
+/* Preferences Button */
+#pref-button{
+    background-color: rgb(246, 152, 39);
+    position: absolute;
+    left: 25%;
+    font-family: "Cinzel";
+    font-size: 30px;
+    align-items: center;
+
+}
+
+#pref-button.btn:hover {
+    background: rgb(240, 228, 181);
+}
 
 /* ABOUT SECTION */
 #about {
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 /* What is BeerNext? */
@@ -82,7 +97,7 @@ body, html {
 }
 
 /* BeerNext Intro Paragraph */
-p#intro-p {
+#about, p {
     margin-top: 2%;
     font-size: 25px;
     font-family: "Droid Serif";
@@ -95,7 +110,7 @@ p#intro-p {
     display:flex;
     flex-wrap: wrap;
     height: 100%;
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 .flex-container#features hr {

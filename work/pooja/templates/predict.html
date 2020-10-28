@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     
     <!-- Our CSS -->
-    <link rel="stylesheet" href="static/output_page/css/style.css">
+    <link rel="stylesheet" href="../static/prediction_page/css/style.css">
 </head>
 
 <body>
@@ -29,6 +29,11 @@
             <img class = "responsive" src = "../static/logo-1.png">
         </div>
     </div>
+
+
+      <!-- The div where we will inject our map -->
+    <div id="map" style="width: 800px; height: 400px"></div>
+    <input type="button" value="Get my beers" onclick="getBeer()">
 
 
 
@@ -58,12 +63,15 @@
     <!-- D3 JS -->
     <script src="https://d3js.org/d3.v5.min.js"></script>
 
-     <!-- Marker Cluster -->
-    <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+     
+    <!-- <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script> -->
 
     <!-- Bootstrap JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     
     <!-- our JavaScript -->
-    <script type="text/javascript" src="../static/output_page/js/app.js"></script>
+    <script type="text/javascript" src="../static/prediction_page/js/logic.js"></script>
+    
+    <!-- API key -->
+    <!-- <script type="text/javascript" src="../static/prediction_page/js/config.js"></script> -->
 </body>

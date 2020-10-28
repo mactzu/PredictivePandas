@@ -14,3 +14,10 @@
     position: relative;
     margin: auto;
 }
+
+
+#map,
+body,
+html {
+  height: 100%;
+}
