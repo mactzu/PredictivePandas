@@ -174,7 +174,7 @@ img {
 
 /* FORM SECTION */
 .row {
-    margin-top: 3%;
+    margin-top: 1%;
     margin-left: 8%;
     margin-right: 4%;
 }
@@ -198,13 +198,9 @@ img {
 .form-group#country {
     margin-bottom: 5%;
     width:70%;
-    margin-left: 15%;
 }
-.form-group#beerstyle {
-    margin-bottom: 5%;
-    width:70%;
-    margin-left: 15%;
-}
+
+
 
 
 
@@ -218,25 +214,7 @@ input#myInput {
     border: none;
 }
 
-
-/* form {
-    margin-top: 3%;
-    width: 60%;
-    margin-left: 5%;
-    
-}
-
-form.row {
-    max-width: 50%;
-}
-
-.row#input-field {
-    margin-left: 20%;
-} */
-
-/*taste tag input*/
-
-
+/* 
 input[type=text] {
     background-color: #f0e4b5;
     font-size: 20px;
@@ -257,7 +235,7 @@ input[type=text] {
   ::placeholder {
 
     font-size: 18px;
-  }
+  } */
 
 input.form-control {
     width: 100%;
@@ -272,6 +250,11 @@ label {
       font-size: 20px;
       font-weight: lighter;
 }
+
+
+
+
+
 
 
 /* SLIDER */
@@ -353,13 +336,11 @@ input[type = "image"] {
     .btn {
         font-size: 40px;
     }
-    /* .container-fluid#sliders {
-        margin-top: 5%;
-    }
-    .container#about {
-        margin-bottom: 5%;
-    } */
 }
+
+
+
+
 
 @media screen and (max-width: 900px) {
     .subheading {
@@ -386,3 +367,12 @@ input[type = "image"] {
 input[type=text]#taste-preference {
     font-size: 60px;
   }
+
+
+.form-group#country {
+    margin-top: 5%;
+}
+
+.form-group#style {
+    max-width: 70%;
+}
