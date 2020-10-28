@@ -115,10 +115,26 @@
             <form action="{{ url_for('predict')}}" method="POST">
                 <div class="row">
                     <div class="col-md-6" id = "left-section">
+
                         <div class="form-group" id = "taste">
                             <label for="taste">What flavours do you enjoy ?</label>
                             <input type="text" class="tags_input" id="taste-preference" placeholder="Sweet, Bitter, Citrus, Sour" name="taste-preference">
                         </div>
+
+
+                        <div class="form-group" id = "palate">
+                            <label for="palate">What palate sensations are you after ?</label>
+                            <input type="text" class="tags_input" id="palate-preference" placeholder="Heavy, Light, Raw, Watery" name="palate-preference">
+                        </div>
+                        <div class="form-group" id = "aroma">
+                            <label for="aroma">What aromas do you like ?</label>
+                            <input type="text" class="tags_input" id="aroma-preference" placeholder="Fruity, Herbal, Floral, Smokey" name="aroma-preference">
+                        </div>
+                        <div class="form-group" id = "look">
+                            <label for="look">What colours do you prefer in a beer ?</label>
+                            <input type="text" class="tags_input" id="look-preference" placeholder="Pale, Golden, Black, Brown" name="look-preference">
+                        </div>
+<!-- 
                         <div class="form-group" id = "palate">
                             <label for="palate">What palate sensations are you after ?</label>
                             <input type="text" class="form-control" id="palate-preference" placeholder="Heavy, Light, Raw, Watery" name="palate-preference">
@@ -130,7 +146,7 @@
                         <div class="form-group" id = "look">
                             <label for="look">What colours do you prefer in a beer ?</label>
                             <input type="text" class="form-control" id="look-preference" placeholder="Pale, Golden, Black, Brown" name="look-preference">
-                        </div>
+                        </div> -->
                     </div>
     
                     <div class="col-md-6" id = "right-section">

@@ -380,3 +380,9 @@ input[type = "image"] {
 
 
 
+/* FORMATTING TAGS */
+
+/* TASTE TAGS */
+input[type=text]#taste-preference {
+    font-size: 60px;
+  }

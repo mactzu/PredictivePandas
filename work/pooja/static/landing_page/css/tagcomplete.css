@@ -16,6 +16,7 @@
 	all:unset;
 	min-height:45px !important;
 	background:none;
+	font-size: 20px;
 	display:inline;
 	margin:unset;
 	padding: unset;
@@ -62,10 +63,11 @@
 .tag_complete_main .autocomplete:not(.hide){
 	list-style: none;
 	padding: 8px;
-	background:#dd953f;
+	background:#f0e4b5;
+	font-size: 20px;
 	display:block;
 	position:relative;
-	border:1px solid #dd953f;
+	border:1px solid #f0e4b5;
 	border-top:0;
 	z-index:1000000 !important;
 	margin:0px;

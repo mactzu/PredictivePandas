@@ -2,6 +2,8 @@
 *APACHE 2.0 LICENSE
 *@author: Razak Zakari <razzsense@gmail.com>
  */
+
+ 
 (function( $ ){
 
 	/**
