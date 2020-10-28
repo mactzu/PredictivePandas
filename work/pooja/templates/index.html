@@ -47,11 +47,7 @@
         <div class = "text-center">
             <h2 class = "section-heading">What is BeerNext?</h2>
             <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, 
-                ed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-                ut aliquip ex ea commodo consequat.
+            <p>When starting out on this project we were told to 'pick something we were passionate about'.  Well, that was easy - food and alcohol ... some of the greatest joys in life, right?  We knew we wanted to create a recommendation engine and as we started looking around we found plenty.  Restaurant recommenders, cuisine recommenders, locality based recommenders and of course the wine recommenders.  But what about beer?  Not too many out there.  Whilst worldwide beer consumption is on the decline, the interest in craft beer is surging.  Driven by passionate home brewers and craft beer makers, together with increasingly more sophisticated beer drinkers, the choices are growing and exponentially.  So how do you find that illusive 'best' beer when you don't even know it's out there?
             </p>        
         </div>
 
@@ -95,77 +91,55 @@
         <div class = "flex-container">
             <div class = "row text-center">
                 <h2 class = "subsection-heading-1">Choose Your Preferences</h2>
-                <h3 class = "subsection-heading-2">Feature Words</h3>
+                <h3 class = "subsection-heading-2">Customise Your Next Beer</h3>
             </div>
 
-            <div class = "row">
-                <div class = "col-md-6">
-                    <form id = "form" action = "{{ url_for('predict')}}" method = "POST">
-                        <div class="form-group">
+            <form action="{{ url_for('predict')}}" method="POST">
+                <div class="row">
+                    <div class="col-md-6" id = "left-section">
+                        <div class="form-group" id = "taste">
                             <label for="taste">What flavours do you enjoy ?</label>
                             <input type="text" class="form-control" id="taste-preference" placeholder="Sweet, Bitter, Citrus, Sour" name="taste-preference">
                         </div>
-        
-                        <div class="form-group">
+                        <div class="form-group" id = "palate">
                             <label for="palate">What palate sensations are you after ?</label>
                             <input type="text" class="form-control" id="palate-preference" placeholder="Heavy, Light, Raw, Watery" name="palate-preference">
                         </div>
-        
-                        <div class="form-group">
+                        <div class="form-group" id = "aroma">
                             <label for="aroma">What aromas do you like ?</label>
                             <input type="text" class="form-control" id="aroma-preference" placeholder="Fruity, Herbal, Floral, Smokey" name="aroma-preference">
                         </div>
-        
-                        <div class="form-group">
-                            <label for="look">What colors do you prefer in a beer ?</label>
+                        <div class="form-group" id = "look">
+                            <label for="look">What colours do you prefer in a beer ?</label>
                             <input type="text" class="form-control" id="look-preference" placeholder="Pale, Golden, Black, Brown" name="look-preference">
                         </div>
-                    </form>
+                    </div>
+    
+                    <div class="col-md-6" id = "right-section">
+                        
+                        <div class="form-group">
+                            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                            <p class = "counter">Alcohol (%): <span id="demo"></span></p>
+                        </div> 
+     
+                        <div class="form-group" autocomplete="off" id = "country">
+                            <div class="autocomplete">
+                                <input id="myInput" type="text" name="myCountry" placeholder="Country">
+                            </div>
+                        </div>
+    
+                        <div class="form-group" autocomplete="off" id = "beerstyle">
+                            <div class="autocomplete">
+                                <input id="myInput" type="text" name="myBeerstyle" placeholder="Beer Style">
+                            </div>
+                        </div>
+                
+                        <input type="submit" class="btnRegister"  value="Submit"/>
+                    </div>
                 </div>
-
-                <div class = "col-md-6">
-                    <form id = "form" action = "{{ url_for('predict')}}" method = "POST">
-                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                        <p>Value: <span id="demo"></span></p>
-                    </form>
-
-                </div>
-            </div>       
+            </form>      
         </div>
     </div>
-
-    <!-- <div class = "container-fluid bg-light" id = "sliders">
-        <div class = "flex-container">
-            <div class = "row text-center">
-                <h2 class = "subsection-heading-1">Choose Your Preferences</h2>
-                <hr>
-            </div>
-
-            <div class = "slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                <p>Value: <span id="demo"></span></p>
-                <br>
-                <input type="range" min="1" max="100" value="50" class="slider" id="myRange1">
-                <p>Value: <span id="demo1"></span></p>
-                <br>
-                <input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
-                <p>Value: <span id="demo2"></span></p>
-                <br>
-                <input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
-                <p>Value: <span id="demo3"></span></p>
-            </div>
-        </div>
-
-
-        <div class = "flex-container bg-light">
-            <div class = "row text-center">
-                <input type = "image" src = "../static/button.png" name = "saveForm" class = "submit" id = "saveForm"/> 
-            </div>
-        </div>
-
-    </div> -->
-
-
 
     <!-- Leaflet JavaScript -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"

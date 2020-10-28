@@ -52,3 +52,7 @@ slider3.oninput = function() {
 document.getElementById("saveForm").onclick = function() {
     location.href = "/predict"
 }
+
+
+
+
