@@ -5,12 +5,23 @@ body, html {
 
 }
 
+
+
+
+
+
+
+
 /* Container Fluid - Hero Image */
 .container-fluid {
     height: 100%;
     margin: 0;
 } 
 
+.container-fluid {
+    height: 100%;
+    margin: 0;
+} 
 
 /* Hero Image  */
 .hero-image {
@@ -47,27 +58,43 @@ body, html {
 } 
 
 
-/* About Button */
+/* Explore Button */
 
 #about-button.btn {
     border: none;
     position: absolute;
     top: 90%;
     left: 50%;
-    
+    transform: translate(-50%, -50%);
     background-color: #dd953f;
     font-family: "Cinzel";
     font-size: 25px;
     cursor: pointer;
     border-radius: 4px;
-    display: inline-block;
     color:  black;
 }
 
 #about-button.btn:hover {background: rgb(240, 228, 181)} 
 
+
 /* Preferences Button */
-a#pref-button {
+
+#pref-button.btn {
+    border: none;
+    position: absolute;
+    background-color: #dd953f;
+    font-family: "Cinzel";
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 4px;
+    color:  black;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 1%;
+    
+
+}
+/* a#pref-button {
     margin-left: 172%;
     margin-top: 20%;
 }
@@ -83,7 +110,7 @@ a#pref-button {
     background-color: #dd953f;
     font-family: "Cinzel";
     font-size: 25px;
-}
+} */
 
 
 /* Get me a beer Button */
@@ -161,13 +188,19 @@ a#map-button {
 .text-muted {
     margin-top: -20%;
     font-family: "Droid Serif";
-    font-size: 20px;
+    font-size: 18px;
     text-align: justify;
 }
 
 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: -15%;
+    
 }
+
+
 
 /* PREFERENCE SECTION */
 
@@ -352,7 +385,7 @@ input[type = "image"] {
 
 @media screen and (max-width:760px) {
     .container-fluid#preferences {
-        height: 225%;
+        height: 255%;
     }
     .row{ 
         margin-top: 3%;
