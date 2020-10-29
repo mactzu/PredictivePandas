@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Beer Recommender</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../static/favicon.png" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="../static/landing_page/css/style.css">
+
+    <!-- jquery tagcomplete CSS -->
+    <link rel="stylesheet" href="../static/landing_page/css/tagcomplete.css">
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <div class = "container-fluid">
+        <div class="hero-image">
+            <img class = "responsive" src = "../static/logo.png">
+            <div class = "subheading text-center">Welcome to BeerNext</div>
+            <div class = "subheading-1 text-center">A beer recommender powered by Machine Learning</div>
+            <div class = "hero-text">
+                <a class = "btn js-scroll-trigger" id = "about-button" href = "#about">Explore</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class = "container" id = "about">
+        <div class = "text-center">
+            <h2 class = "section-heading">What is BeerNext?</h2>
+            <hr>
+            <p>When starting out on this machine learning project we were told to 'pick something we were passionate about'. 
+                Well, that was easy - food and alcohol ... some of the greatest joys in life, right?  We knew we wanted to create a recommendation engine 
+                and as we started looking around, we found plenty. Restaurant recommenders, cuisine recommenders, locality-based recommenders and of course 
+                the wine recommenders. But what about beer? Not too many out there. Whilst worldwide beer consumption is on the decline, the interest in 
+                craft beer is surging. Driven by passionate home brewers and craft beer makers, together with increasingly more sophisticated beer drinkers, 
+                the choices are growing and exponentially. So how do you find that illusive 'best' beer when you don't even know it's out there?
+            </p>        
+        </div>
+
+        <div class = "flex-container" id = "features">
+            <div class = "row text-center">
+                <h2 class = "subsection-heading">The Features of Beer</h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                </p>
+
+                <div class = "col-md-6 text-center">
+                    <img src = "../static/taste.png" class = "img-responsive" style = "max-width:100%">  
+                    <p class = "text-muted">There no doubt that taste is subjective.  There are five taste sensations: sweet, sour, salty, bitter and umami 
+                        and they’re all in beer. It’s an acidic drink, typically pH 3.00–6.00 but in most there’s also some sweetness (unless it’s dry). 
+                        There’s salt in the water used and bitterness, which was once used for balance is a whole genre these days. Finally, there’s that 
+                        rich maltiness - the umami!</p>         
+                </div>
+                    
+                <div class = "col-md-6 text-center">
+                    <img src = "../static/palate.png" class = "img-responsive" style = "max-width:100%">                    
+                    <p class = "text-muted">Developing your palate isn’t complicated, it just takes practice. First you start with understanding your bitterness 
+                        threshold. Then it’s on to the serious business of recognising hops, malts and of course those all-important “off flavours”. There’s also a 
+                        little reading and research involved, to learn about what you’re drinking. Lastly, you want buddies, the kind that know a good thing! </p>    
+                </div>
+
+                <div class = "col-md-6 text-center">
+                    <img src = "../static/aroma.png" class = "img-responsive" style = "max-width:100%">  
+                    <p class = "text-muted">Whether it’s mouth open or closed (and yes, it makes a difference), this is the hard part. Take some time. 
+                        You only get one shot at this before tasting and we humans can distinguish at least 10,000 distinct smells! 
+                        Then start big with something like green or fruity before going for some nuance. Hone it. Is there cut grass or oregano maybe? 
+                        If you know your hops, yeast and malt smells, even better.</p>         
+                </div>
+
+                <div class = "col-md-6 text-center">
+                    <img src = "../static/look.png" class = "img-responsive" style = "max-width:100%"> 
+                    <p class = "text-muted">Easy to verbalise, see and agree on is perhaps why this doesn’t tend to get a lot of time. Still, what’s that saying, 
+                        we drink with our eyes? Can’t imagine too much on a hot day beating a light straw coloured, clear beer, with a tan and creamy head. 
+                        Follow it up with a comment about the spidery lacing and we’ve ticked all the boxes, colour, clarity and lacing. Boom!</p>         
+                </div>
+            </div>
+            <div class = "row text-center">
+                <a class = "btn js-scroll-trigger" id = "pref-button" href = "#preferences">Preferences</a>
+            </div>
+          
+        </div>   
+    </div>
+<script type=“text/javascript”>
+    var data = {{ prediction_text }}
+  </script>
+    <div class = "container-fluid bg-light" id = "preferences">
+
+        <div class = "flex-container" id = "choose" >
+            <div class = "row text-center">
+                <h2 class = "subsection-heading-1">Choose Your Preferences</h2>
+                <!-- <h3 class = "subsection-heading-2">Customise Your Next Beer</h3> -->
+            </div>
+
+            <form action="{{ url_for('predict')}}" method="POST">
+                <div class="row">
+                    <div class="col-md-6" id = "left-section">
+
+                        <h3 class = "subsection-heading-2">Customise Your Next Beer</h3>
+                        <br>
+
+                        <div class="form-group" id = "taste">
+                            <label for="taste">What flavours do you enjoy ? </label> 
+                            <input type="text" class="tags_input" id="taste-preference" value="sweet" name="taste-preference">
+                        </div>
+
+                        <div class="form-group" id = "style">
+                            <label for="style">Select the beer style: </label>
+                            <select class = "form-control" id = "style" name="beerstyle">
+                                <option value = "pilsener"> pilsener</option>
+                                <option value = "lager"> lager</option>
+                                <option value = "ale"> ale</option>
+                                <option value = "kolsch"> kolsch</option>
+                                <option value = "bitter"> bitter</option>
+                                <option value = "exotic"> exotic</option>
+                                <option value = "porter"> porter</option>
+                                <option value = "stout"> stout</option>
+                                <option value = "trappist"> trappist</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" autocomplete = "off" id = "country" >
+                            <div class = "autocomplete">
+                                <input id = "countryInput" type = "text" name = "country" placeholder = "Country">
+                            </div>
+                        </div>
+
+                    </div>
+    
+                    <div class="col-md-6" id = "right-section">
+                        <h3 class = "subsection-heading-3">Rank Beer Features </h3>
+                        <br>
+                        <!-- <p>Rank these three features from 1  to 3, 1 being the most important feature to consider, 3 being the least important.</p> -->
+                        
+                        
+                        <div class="form-group" id = "taste-rank">
+                            <input type="range" min="1" max="3" value="1" class="slider" id="myRange" name="tasteRank">
+                            <br>
+                            <p class = "counter">Taste Ranking: <span id="demo"></span></p>
+                        </div> 
+                        <div class="form-group" id = "aroma-rank">
+                            <input type="range" min="1" max="3" value="2" class="slider" id="myRange1" name="aromaRank">
+                            <br>
+                            <p class = "counter">Aroma Ranking: <span id="demo1"></span></p>
+                        </div> 
+                        <div class="form-group" id = "appearance-rank">
+                            <input type="range" min="1" max="3" value="3" class="slider" id="myRange2" name="appearanceRank">
+                            <br>
+                            <p class = "counter">Appearance Ranking: <span id="demo2"></span></p>
+                        </div> 
+
+                        
+                        <div class="form-group" id = "beerstrength">
+                            <label for="strength">Select the beer strength: </label>
+                            <select  class="form-control" id = "selStrength" name="beerstrength">
+                                <option value = "light"> light</option>
+                                <option value = "mild"> mild</option>
+                                <option value = "full"> full</option>
+                                <option value = "strong"> strong</option>
+                                <option value = "heavy"> heavy</option>
+                            </select>
+                            
+                        </div> 
+                        {{ prediction_text }}
+                        <button class = "btn js-scroll-trigger" type = "submit" id = "map-button" href = "#map-section">Get me a beer</button>
+                        
+                        <!-- <div class="form-group" autocomplete="off" id = "country">
+                            <div class="autocomplete">
+                                <input id="myInput" type="text" name="myCountry" placeholder="Country">
+                            </div>
+                        </div>
+    
+                        <div class="form-group" autocomplete="off" id = "beerstyle">
+                            <div class="autocomplete">
+                                <input id="myInput" type="text" name="myBeerstyle" placeholder="Beer Style">
+                            </div>
+                        </div> -->
+    
+                    </div>
+                </div>
+            </form>      
+        </div>
+    </div>
+
+    <script type=“text/javascript”>
+        var data = {{ prediction_text }}
+    </script>
+
+    <div class = "container-fluid bg-white" id = "map-section">
+        <script>
+            document.location.hash = '{{ scroll }}';
+        </script>
+        <div class = "row text-center">
+            <h2 class = "subsection-heading-4">Find Your Next Beer</h2>
+        </div>
+
+        <div id = "map">
+
+        </div>
+    </div>
+
+ 
+
+
+
+    <!-- Jquery scripts-->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" 
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" 
+        crossorigin="anonymous"></script>
+    <script src="../static/landing_page/js/tagcomplete.js"></script> 
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+
+    <!--D3 cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.1.1/d3.min.js"></script>
+
+    <!-- D3 JS -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <!-- our JavaScript -->
+    <script type="text/javascript" src="static/landing_page/js/logic.js"></script>
+
+</body>

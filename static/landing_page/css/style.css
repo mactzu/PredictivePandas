@@ -1,0 +1,451 @@
+/*Main Body*/
+body, html {
+  scroll-behavior: smooth;
+  height: 100%;
+
+}
+
+/* Container Fluid - Hero Image */
+.container-fluid {
+    height: 100%;
+    margin: 0;
+} 
+
+
+/* Hero Image  */
+.hero-image {
+  background-image: url("https://images.unsplash.com/photo-1529877612930-6e7df7e2b02f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Logo */
+.responsive {
+    display: block;
+    position: relative;
+    margin: auto;  
+}
+
+
+/* Hero Text Headings */
+.subheading {
+    line-height: 30px;
+    margin-top: -1%;
+    margin-bottom: 30px;
+    font-family: "Cinzel";
+    color:rgb(240, 228, 181);
+}
+
+.subheading-1 {
+    font-size: 30px;
+    line-height: 10px;
+    font-family: "Cinzel";
+    color:rgb(240, 228, 181);
+} 
+
+
+/* About Button */
+
+#about-button.btn {
+    border: none;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    
+    background-color: #dd953f;
+    font-family: "Cinzel";
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 4px;
+    display: inline-block;
+    color:  black;
+}
+
+#about-button.btn:hover {background: rgb(240, 228, 181)} 
+
+/* Preferences Button */
+a#pref-button {
+    margin-left: 172%;
+    margin-top: 20%;
+}
+
+
+
+#pref-button.btn:hover {
+    background: rgb(240, 228, 181);
+}
+
+
+#pref-button{
+    background-color: #dd953f;
+    font-family: "Cinzel";
+    font-size: 25px;
+}
+
+
+/* Get me a beer Button */
+a#map-button {
+    margin-left: 40%;
+    margin-top: 15%;
+    display: justify;
+
+}
+
+#map-button{
+    background-color: #dd953f;
+    font-family: "Cinzel";
+    font-size: 25px;
+    align-items: center;
+
+}
+
+#map-button.btn:hover {
+    background: rgb(240, 228, 181);
+}
+
+
+
+/* ABOUT SECTION */
+
+
+/* What is BeerNext? */
+#about h2.section-heading {
+    font-size: 4rem;
+    font-family: "Cinzel";
+    margin-top: 5%;
+}
+
+/* BeerNext Intro Paragraph */
+#about, p {
+    margin-top: 2%;
+    font-size: 20px;
+    font-family: "Droid Serif";
+}
+
+
+/* DEALING WITH FLEX CONTAINERS FEATURES SECTION*/ 
+
+.flex-container#features {
+    display:flex;
+    flex-wrap: wrap;
+    height: 100%;
+    margin-top: 3%;
+}
+
+.flex-container#features hr {
+    width: 100%;
+    margin: 0%;
+    align-self: stretch;
+}
+
+/* The Features of Beer Heading */
+#features h2.subsection-heading {
+    font-size: 4rem;
+    font-family: "Cinzel";
+    width: 100%;
+    margin-top: 3%;
+}
+
+/* Features of Beer Paragraph */
+#features.text-center.subsection-heading, p {
+    margin-top: 2%;
+    font-size: 20px;
+    font-family: "Droid Serif";
+    text-align: justify;
+}
+
+/* Feature Explanation Paragraphs */
+.text-muted {
+    margin-top: -20%;
+    font-family: "Droid Serif";
+    font-size: 20px;
+    text-align: justify;
+}
+
+img {
+    margin-top: -15%;
+}
+
+/* PREFERENCE SECTION */
+
+.container-fluid.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    overflow: auto;
+}
+
+.container-fluid#preferences {
+    margin-top: 5%;
+}
+
+.flex-container h2.subsection-heading-1 {
+    font-size: 4rem;
+    font-family: "Cinzel";
+    width: 100%;
+    margin-top: 3%;
+}
+
+
+.flex-container h3.subsection-heading-2 {
+    font-size: 2.5rem;
+    font-family: "Cinzel";
+    margin-left: 0.5%;
+    margin-top: 3%;
+    text-align: left;
+}
+
+.row h3.subsection-heading-3 {
+    font-size: 2.5rem;
+    font-family: "Cinzel";
+    margin-top: 3%;
+    margin-left: 15%;
+    text-align: left;
+}
+
+
+/* FORM SECTION */
+.row {
+    margin-top: 0%;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+
+
+.form-group#taste {
+    margin-bottom: 3%;
+    width:80%;
+}
+.form-group#palate {
+    margin-bottom: 3%;
+    width:80%;
+}
+.form-group#aroma {
+    margin-bottom: 3%;
+    width:80%;
+}
+.form-group#look {
+    margin-bottom: 3%;
+    width:70%;
+}
+.form-group#country {
+    margin-bottom: 3%;
+    width:80%;
+}
+
+
+label {
+      font-family: "Cinzel";
+      font-size: 20px;
+      font-weight: lighter;
+}
+
+
+#beerstrength label {
+    padding: 0;
+}
+
+
+
+/* SLIDER */
+
+.slider {
+    -webkit-appearance: none;
+    max-width: 70%;
+    height: 15px;
+    border-radius: 5px;
+    background: #f0e4b5;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 100px;
+    border: 0;
+    background-image: url("../../slider.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 150px;
+    height: 150px;
+    border: 0;
+    background: url("../../slider.png");
+    cursor: pointer;
+}
+
+
+p.counter {
+    text-align: center;
+    margin-top: 15px;
+    font-family: "Cinzel";
+    font-size: 20px;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+input[type = "range"] {
+    width: 1000px;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+}
+
+input[type = "image"] {
+    max-width: 100%;
+    height: auto;
+    margin-left: 25%;
+    display: block;
+    position: relative;
+    border: none;
+    outline: none;
+} 
+
+
+
+
+/* Media Queries */
+@media screen and (min-width: 601px) {
+    .subheading {
+        font-size: 63px;
+    }
+    .subheading-1 {
+        font-size: 30px;
+    }
+    .btn {
+        font-size: 40px;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 900px) {
+    .subheading {
+        font-size: 40px;
+    }
+    .subheading-1 {
+        font-size: 15px;
+    }
+    .btn {
+        font-size: 30px;
+    }
+
+
+}
+
+
+@media screen and (max-width:760px) {
+    .container-fluid#preferences {
+        height: 225%;
+    }
+    .row{ 
+        margin-top: 3%;
+    }
+    .row h3.subsection-heading-3 {
+        margin-top: 8%;
+        text-align: left;
+    }
+
+
+}
+
+@media screen and (min-width:800px) {
+    .container-fluid#preferences {
+        height: 130%;
+
+    }  
+
+}
+
+
+
+
+/* FORMATTING TAGS */
+
+/* TASTE TAGS */
+input[type=text]#taste-preference {
+    font-size: 60px;
+  }
+
+
+.form-group#country {
+    margin-top: 5%;
+}
+
+.form-group#style {
+    max-width: 80%;
+}
+
+
+/* Dropdown Box Format */
+
+.form-group#beerstrength {
+    margin-left: 25%;
+    margin-top: 6%;
+}
+
+#selStrength {
+    width: 70%;
+    height: 50px;
+    border-radius:3px;
+    min-height:10px !important;
+
+    border:1px solid #bcbcbc;
+   
+}
+
+#selStrength option {
+    width: 80%;
+    height: 50px;
+  
+}
+
+
+select {
+    font-family: "Cinzel";
+    font-size: 20px;
+
+}
+select#fixed {
+    -webkit-appearance: none;
+}
+
+
+
+
+.container-fluid h2.subsection-heading-4 {
+    font-size: 4rem;
+    font-family: "Cinzel";
+    width: 100%;
+}
+
+#map {
+
+    position: relative;
+    border-radius: 30px;
+    height: 700px;
+    width: 100%;  /* This means "100% of the width of its container", the .col-md-8 */
+    margin-top: 20%;
+    overflow: hidden;
+}
+
+.container-fluid#map-section {
+    margin-top: 5%;
+}
+
