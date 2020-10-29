@@ -48,6 +48,7 @@ When starting out on this project we were told to 'pick something we were passio
      * [matplotlib](https://matplotlib.org/)
      * [scikit-learn 0.23.2](https://scikit-learn.org/stable/user_guide.html)
      * [NumPy](https://numpy.org/)
+     * [tagcomplete](https://github.com/razzbee/tagcomplete)
      * [seaborn](http://seaborn.pydata.org/index.html)
      * [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
