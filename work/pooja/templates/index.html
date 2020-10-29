@@ -63,9 +63,6 @@
             <div class = "row text-center">
                 <h2 class = "subsection-heading">The Features of Beer</h2>
                 <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                </p>
 
                 <div class = "col-md-6 text-center">
                     <img src = "../static/taste.png" class = "img-responsive" style = "max-width:80%">  
@@ -124,29 +121,25 @@
                             <input type="text" class="tags_input" id="taste-preference" value="sweet" name="taste-preference">
                         </div>
 
-                        <div class="form-group" id = "palate">
-                            <label for="palate">What palate sensations are you after ? </label>
-                            <input type="text" class="tags_input" id="palate-preference" value="heavy" name="palate-preference">
-                        </div>
-
-                        <div class="form-group" id = "aroma">
-                            <label for="aroma">What aromas do you like ? </label> 
-                            <input type="text" class="tags_input" id="aroma-preference" value="herbal" name="aroma-preference">
-                        </div>
-
-                        <!-- <div class="form-group" id = "look">
-                            <label for="look">What colours do you prefer in a beer ?</label>
-                            <input type="text" class="tags_input" id="look-preference" placeholder="Pale, Golden, Black, Brown" name="look-preference">
-                        </div> -->
-
                         <div class="form-group" id = "style">
-                            <label for="style">What style of beer are you looking for ? </label> 
-                            <input type="text" class="tags_input" id="style-preference" value="ale" name="style-preference">
+                            <label for="strength">Select the beer style: </label>
+                            <select class = "form-control" id = "selStrength">
+                                <option value = "pilsener"> pilsener</option>
+                                <option value = "lager"> lager</option>
+                                <option value = "ale"> ale</option>
+                                <option value = "kolsch"> kolsch</option>
+                                <option value = "bitter"> bitter</option>
+                                <option value = "exotic"> exotic</option>
+                                <option value = "porter"> porter</option>
+                                <option value = "stout"> stout</option>
+                                <option value = "trappist"> trappist</option>
+                            </select>
                         </div>
 
-                        <div class="form-group" id = "country" >
-                            <label for="country">Choose a Country </label> 
-                            <input type="text" class="tags_input" id="country-preference" value="Germany" name="country-preference">
+                        <div class="form-group" autocomplete = "off" id = "country" >
+                            <div class = "autocomplete">
+                                <input id = "countryInput" type = "text" name = "country" placeholder = "Country">
+                            </div>
                         </div>
 
                     </div>
@@ -176,7 +169,7 @@
                         
                         <div class="form-group" id = "beerstrength">
                             <label for="strength">Select the beer strength: </label>
-                            <select id = "selStrength">
+                            <select class = "form-control" id = "selStrength">
                                 <option value = "light"> light</option>
                                 <option value = "mild"> mild</option>
                                 <option value = "full"> full</option>
@@ -185,23 +178,10 @@
                             </select>
                             
                         </div> 
-                        
-                        <a class = "btn js-scroll-trigger" type = "submit" id = "map-button" href = "#map-section">Get me a beer</a>
-                        
-                        <!-- <div class="form-group" autocomplete="off" id = "country">
-                            <div class="autocomplete">
-                                <input id="myInput" type="text" name="myCountry" placeholder="Country">
-                            </div>
-                        </div>
-    
-                        <div class="form-group" autocomplete="off" id = "beerstyle">
-                            <div class="autocomplete">
-                                <input id="myInput" type="text" name="myBeerstyle" placeholder="Beer Style">
-                            </div>
-                        </div> -->
     
                     </div>
                 </div>
+                <button class = "btn js-scroll-trigger" type = "submit" id = "map-button" href = "#map-section"></button>
             </form>      
         </div>
     </div>
