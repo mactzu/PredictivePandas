@@ -361,7 +361,7 @@ var words = [
 
 $(function(){
 
-    var data = beer_style.concat(words);
+    var data = words;
 
     $(".tags_input").tagComplete({
 

@@ -5,13 +5,6 @@ body, html {
 
 }
 
-
-
-
-
-
-
-
 /* Container Fluid - Hero Image */
 .container-fluid {
     height: 100%;
@@ -47,6 +40,7 @@ body, html {
     margin-top: -1%;
     margin-bottom: 30px;
     font-family: "Cinzel";
+    font-size: 60px;
     color:rgb(240, 228, 181);
 }
 
@@ -78,7 +72,7 @@ body, html {
 
 
 /* Preferences Button */
-
+/* 
 #pref-button.btn {
     border: none;
     position: absolute;
@@ -92,12 +86,12 @@ body, html {
     transform: translate(-50%, -50%);
     margin-top: 1%;
     
-}
+} */
 
 
 /* Get me a beer Button */
 
-#map-button.btn {
+button.btn {
     border: none;
     position: absolute;
     background-color: #dd953f;
@@ -107,15 +101,9 @@ body, html {
     border-radius: 4px;
     color:  black;
     left: 50%;
-    margin-top: 5%;
     transform: translate(-50%, -50%);
-
-    
+   
 }
-
-
-
-
 
 
 
@@ -127,7 +115,7 @@ body, html {
 #about h2.section-heading {
     font-size: 4rem;
     font-family: "Cinzel";
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 /* BeerNext Intro Paragraph */
@@ -161,28 +149,20 @@ body, html {
     margin-top: 3%;
 }
 
-/* Features of Beer Paragraph */
-#features.text-center.subsection-heading, p {
-    margin-top: 2%;
-    font-size: 20px;
-    font-family: "Droid Serif";
-    text-align: justify;
-}
 
 /* Feature Explanation Paragraphs */
 .text-muted {
-    margin-top: -20%;
+    margin-top: -15%;
     font-family: "Droid Serif";
-    font-size: 18px;
-    text-align: justify;
+    font-size: 18px;  
 }
 
+/* Bottle Caps PNG */
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -15%;
-    
+    margin-top: -15%;    
 }
 
 
@@ -197,7 +177,7 @@ img {
 }
 
 .container-fluid#preferences {
-    margin-top: 5%;
+    margin-top: 6%;
 }
 
 .flex-container h2.subsection-heading-1 {
@@ -226,46 +206,38 @@ img {
 
 
 /* FORM SECTION */
+label#featureWords {
+    font-size: 15px;
+}
+
+label#ranking {
+    font-size: 15px;
+    margin-left: 15%;
+    text-align: left;
+}
 .row {
-    margin-top: 0%;
+    margin-top: 1%;
     margin-left: 4%;
     margin-right: 4%;
 }
-
-
-
 .form-group#taste {
-    margin-bottom: 3%;
+    margin-top: 5%;
     width:80%;
 }
-.form-group#palate {
-    margin-bottom: 3%;
-    width:80%;
-}
-.form-group#aroma {
-    margin-bottom: 3%;
-    width:80%;
-}
-.form-group#look {
-    margin-bottom: 3%;
-    width:70%;
-}
-.form-group#country {
-    margin-bottom: 3%;
+
+.form-group#style {
+    margin-top: 5%;
     width:80%;
 }
 
 
+/* form group labels */
 label {
       font-family: "Cinzel";
       font-size: 20px;
       font-weight: lighter;
 }
 
-
-#beerstrength label {
-    padding: 0;
-}
 
 
 
@@ -334,6 +306,117 @@ input[type = "image"] {
 } 
 
 
+
+
+
+/* Dropdowns: Beer Strength and Beer Style */
+
+.form-group#beerstrength {
+    margin-top: 5%;
+}
+
+#selStrength {
+    width: 70%;
+    height: 50px;
+    border-radius:3px;
+    min-height:10px !important;
+    border:1px solid #bcbcbc;
+   
+}
+
+.form-control {
+    font-size: 18px;
+}
+
+select {
+    font-family: "Cinzel";
+}
+
+
+
+
+
+/* MAP SECTION */
+
+.container-fluid h2.subsection-heading-4 {
+    font-size: 4rem;
+    font-family: "Cinzel";
+    width: 100%;
+    margin-top: 3%;
+}
+
+#map {
+
+    position: relative;
+    border-radius: 30px;
+    height: 700px;
+    width: 100%;  
+    margin-top: 5%;
+    overflow: hidden;
+}
+
+.container-fluid#map-section {
+    margin-top: 0%;
+}
+
+
+
+/* Country Autocomplete Styling */
+
+body {
+  font: 18px "Cinzel";
+}
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+  margin-top: 0%;
+}
+input {
+  border:1px solid #b0bec5;
+
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 18px;
+}
+input[type=text] {
+  background-color: #fcfdff;
+  width: 100%;
+}
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+.autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+  }
+
+/* Media Queries Section */ 
+
+
 /* For desktop: */
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -373,184 +456,61 @@ input[type = "image"] {
 
 /* Media Queries */
 
-
-/* @media screen and (min-width: 601px) {
+@media screen and (max-width: 880px) {
     .subheading {
-        font-size: 63px;
+        font-size: 40px
     }
     .subheading-1 {
-        font-size: 30px;
-    }
-    .btn {
-        font-size: 40px;
+        font-size: 20px;
     }
 }
 
 
-
-
-
-@media screen and (max-width: 900px) {
-    .subheading {
-        font-size: 40px;
+@media screen and (max-width: 768px) {
+    #about h2.section-heading {
+        font-size: 3rem;
     }
-    .subheading-1 {
+    
+    /* BeerNext Intro Paragraph */
+    #about, p {
         font-size: 15px;
+  
     }
-    .btn {
-        font-size: 30px;
+    #features h2.subsection-heading {
+        font-size: 3rem;
+    }
+    .text-muted {
+        font-size: 15px;  
     }
 
-
-}
-
-
-@media screen and (max-width:760px) {
     .container-fluid#preferences {
-        height: 300%;
+        height: 170%;
     }
-    .row{ 
-        margin-top: 3%;
+    button.btn {
+        margin-top: 5%;
     }
     .row h3.subsection-heading-3 {
-        margin-top: 8%;
-        text-align: left;
+        margin-left: 0.5%;    
     }
-
-
-}
-
-@media screen and (min-width:800px) {
-    .container-fluid#preferences {
-        height: 130%;
-
-    }  
-
-} */
-
-
-
-
-/* FORMATTING TAGS */
-
-/* TASTE TAGS */
-input[type=text]#taste-preference {
-    font-size: 60px;
-  }
-
-
-.form-group#country {
-    margin-top: 5%;
-}
-
-.form-group#style {
-    max-width: 80%;
-}
-
-
-/* Dropdown Box Format */
-
-.form-group#beerstrength {
-    margin-left: 25%;
-    margin-top: 6%;
-}
-
-#selStrength {
-    width: 70%;
-    height: 50px;
-    border-radius:3px;
-    min-height:10px !important;
-
-    border:1px solid #bcbcbc;
-   
-}
-
-#selStrength option {
-    width: 80%;
-    height: 50px;
-  
-}
-
-
-select {
-    font-family: "Cinzel";
-    font-size: 20px;
+    label#ranking {
+        margin-left: 0.5%;
+    }
+    .form-group#taste-rank .slider {
+        margin-left:0.5%;
+    }
+    .form-group#aroma-rank .slider {
+        margin-left:0.5%;
+    }
+    .form-group#appearance-rank .slider {
+        margin-left:0.5%;
+    }
+    p {
+        margin-top: 0px;
+    } 
 
 }
-select#fixed {
-    -webkit-appearance: none;
-}
 
 
 
 
-.container-fluid h2.subsection-heading-4 {
-    font-size: 4rem;
-    font-family: "Cinzel";
-    width: 100%;
-}
 
-#map {
-
-    position: relative;
-    border-radius: 30px;
-    height: 700px;
-    width: 100%;  /* This means "100% of the width of its container", the .col-md-8 */
-    margin-top: 20%;
-    overflow: hidden;
-}
-
-.container-fluid#map-section {
-    margin-top: 5%;
-}
-
-/* Country AUTOCOMPLETE */
-* { box-sizing: border-box; }
-body {
-  font: 16px Arial;
-}
-.autocomplete {
-  /*the container must be positioned relative:*/
-  position: relative;
-  display: inline-block;
-}
-input {
-  border: 1px solid transparent;
-  background-color: #f1f1f1;
-  padding: 10px;
-  font-size: 16px;
-}
-input[type=text] {
-  background-color: #f1f1f1;
-  width: 100%;
-}
-input[type=submit] {
-  background-color: DodgerBlue;
-  color: #fff;
-}
-.autocomplete-items {
-  position: absolute;
-  border: 1px solid #d4d4d4;
-  border-bottom: none;
-  border-top: none;
-  z-index: 99;
-  /*position the autocomplete items to be the same width as the container:*/
-  top: 100%;
-  left: 0;
-  right: 0;
-}
-.autocomplete-items div {
-  padding: 10px;
-  cursor: pointer;
-  background-color: #fff;
-  border-bottom: 1px solid #d4d4d4;
-}
-.autocomplete-items div:hover {
-  /*when hovering an item:*/
-  background-color: #e9e9e9;
-}
-.autocomplete-active {
-    /*when navigating through the items using the arrow keys:*/
-    background-color: DodgerBlue !important;
-    color: #ffffff;
-  }

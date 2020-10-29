@@ -94,9 +94,9 @@
                         Follow it up with a comment about the spidery lacing and we’ve ticked all the boxes, colour, clarity and lacing. Boom!</p>         
                 </div>
             </div>
-            <div class = "row text-center">
+            <!-- <div class = "row text-center">
                 <a class = "btn js-scroll-trigger" id = "pref-button" href = "#preferences">Preferences</a>
-            </div>
+            </div> -->
           
         </div>   
     </div>
@@ -114,16 +114,25 @@
                     <div class="col-md-6" id = "left-section">
 
                         <h3 class = "subsection-heading-2">Customise Your Next Beer</h3>
+                        
                         <br>
 
+                        <div class="form-group" autocomplete = "off" id = "country" >
+                            <label for="country">Select a country: </label><br>
+                            <div class = "autocomplete">
+                                <input id = "countryInput" type = "text" name = "country" placeholder = "Country">
+                            </div>
+                        </div>
+
                         <div class="form-group" id = "taste">
-                            <label for="taste">What flavours do you enjoy ? </label> 
-                            <input type="text" class="tags_input" id="taste-preference" value="sweet" name="taste-preference">
+                            <label for="taste">Describe your ideal beer</label><label id = "featureWords">Add descriptive words and choose from our set list</label>
+                            <input type="text" class="tags_input" id="taste-preference" value="sweet, malty" name="taste-preference">
                         </div>
 
                         <div class="form-group" id = "style">
                             <label for="strength">Select the beer style: </label>
-                            <select class = "form-control" id = "selStrength" name="beerstyle">
+                            <select class = "form-control" id = "selStrength" name = "beerstyle">
+                                <option value = "">Beer Style</option>
                                 <option value = "pilsener"> pilsener</option>
                                 <option value = "lager"> lager</option>
                                 <option value = "ale"> ale</option>
@@ -136,16 +145,28 @@
                             </select>
                         </div>
 
-                        <div class="form-group" autocomplete = "off" id = "country" >
-                            <div class = "autocomplete">
-                                <input id = "countryInput" type = "text" name = "country" placeholder = "Country">
-                            </div>
+
+                        <div class="form-group" id = "beerstrength">
+                            <label for="strength">Select the beer strength: </label>
+                            <select class = "form-control" id = "selStrength"name = "beerstrength">
+                                <option value = "">Beer Strength</option>
+                                <option value = "light"> light</option>
+                                <option value = "mild"> mild</option>
+                                <option value = "full"> full</option>
+                                <option value = "strong"> strong</option>
+                                <option value = "heavy"> heavy</option>
+                            </select>
+                            
                         </div>
 
                     </div>
     
                     <div class="col-md-6" id = "right-section">
                         <h3 class = "subsection-heading-3">Rank Beer Features </h3>
+                        <label id = "ranking">1 being the most important feature to consider and 3 being 
+                            the least important feature
+                        </label>
+                     
                         <br>
                         <!-- <p>Rank these three features from 1  to 3, 1 being the most important feature to consider, 3 being the least important.</p> -->
                         
@@ -166,37 +187,36 @@
                             <p class = "counter">Appearance Ranking: <span id="demo2"></span></p>
                         </div> 
 
+
+
                         
-                        <div class="form-group" id = "beerstrength">
-                            <label for="strength">Select the beer strength: </label>
-                            <select class = "form-control" id = "selStrength" name="beerstrength">
-                                <option value = "light"> light</option>
-                                <option value = "mild"> mild</option>
-                                <option value = "full"> full</option>
-                                <option value = "strong"> strong</option>
-                                <option value = "heavy"> heavy</option>
-                            </select>
-                            
-                        </div> 
+                    
+ 
     
                     </div>
                 </div>
-                <button class = "btn js-scroll-trigger" type = "submit" id = "map-button" href = "#map-section"></button>
+                {{ prediction_text }}
+                <div class = "row text-center">
+                    <button class = "btn js-scroll-trigger" type = "submit" id = "map-button" href = "#map-section">Get me a beer</button>
+                </div>
             </form>      
         </div>
     </div>
 
+    <!-- data is the array to use for map -->
+    <script type=“text/javascript”>
+        var data = {{ prediction_text }}
+    </script>
+
 
     <div class = "container-fluid bg-white" id = "map-section">
         <script>
-            document.location.hash = '{{ scroll }}';
+            document.location.hash = '{{ scroll }}'
         </script>
         <div class = "row text-center">
             <h2 class = "subsection-heading-4">Find Your Next Beer</h2>
         </div>
-
         <div id = "map">
-
         </div>
     </div>
 
