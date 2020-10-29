@@ -15,7 +15,7 @@
 
 .tag_complete .tag_input{
 	all:unset;
-	min-height:45px !important;
+	min-height:10px !important;
 	background:none;
 	font-size: 20px;
 	display:inline;
@@ -30,7 +30,7 @@
   -webkit-border-radius: 5;
   -moz-border-radius: 5;
   border-radius: 5px;
-  font-family: "Cinzel";
+  font-family: "Droid Serif";
   color: #455a64;
   font-size: 18px;
   background: #dee1e2;
@@ -67,7 +67,7 @@
 	background:#f0e4b5;
 	font-size: 20px;
 	display:block;
-	font-family: "Cinzel";
+	font-family: "Droid Serif";
 	position:relative;
 	border:1px solid #f0e4b5;
 	border-top:0;
@@ -85,7 +85,7 @@
 	display:block;
 	padding:5px 8px 5px 8px;
 	cursor:pointer;
-	font-family: "Cinzel";
+	font-family: "Droid Serif";
 	-moz-user-select:none;
 	-webkit-user-select:none;
 	-ms-user-select:none;

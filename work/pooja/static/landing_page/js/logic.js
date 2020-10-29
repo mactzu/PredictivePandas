@@ -132,7 +132,7 @@ var beer_style = [
     "pilsener",
     "lager",
     "ale",
-    "kölsch",
+    "kolsch",
     "barleywine",
     "bitter",
     "exotic",
