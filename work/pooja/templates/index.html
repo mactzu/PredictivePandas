@@ -106,7 +106,7 @@
 
     <div class = "container-fluid bg-light" id = "preferences">
 
-        <div class = "flex-container">
+        <div class = "flex-container" id = "choose" >
             <div class = "row text-center">
                 <h2 class = "subsection-heading-1">Choose Your Preferences</h2>
                 <!-- <h3 class = "subsection-heading-2">Customise Your Next Beer</h3> -->
@@ -157,24 +157,25 @@
                         <!-- <p>Rank these three features from 1  to 3, 1 being the most important feature to consider, 3 being the least important.</p> -->
                         
                         
-                        <div class="form-group">
+                        <div class="form-group" id = "taste-rank">
                             <input type="range" min="1" max="3" value="1" class="slider" id="myRange">
                             <br>
                             <p class = "counter">Taste Ranking: <span id="demo"></span></p>
                         </div> 
-                        <div class="form-group">
+                        <div class="form-group" id = "aroma-rank">
                             <input type="range" min="1" max="3" value="2" class="slider" id="myRange1">
                             <br>
                             <p class = "counter">Aroma Ranking: <span id="demo1"></span></p>
                         </div> 
-                        <div class="form-group">
+                        <div class="form-group" id = "appearance-rank">
                             <input type="range" min="1" max="3" value="3" class="slider" id="myRange2">
                             <br>
                             <p class = "counter">Appearance Ranking: <span id="demo2"></span></p>
                         </div> 
 
-
-                        <div class="form-group">
+                        
+                        <div class="form-group" id = "beerstrength">
+                            <label for="strength">Select the beer strength: </label>
                             <select id = "selStrength">
                                 <option value = "light"> light</option>
                                 <option value = "mild"> mild</option>
@@ -184,8 +185,9 @@
                             </select>
                             
                         </div> 
-
-                    
+                        
+                        <a class = "btn js-scroll-trigger" type = "submit" id = "map-button" href = "#map-section">Get me a beer</a>
+                        
                         <!-- <div class="form-group" autocomplete="off" id = "country">
                             <div class="autocomplete">
                                 <input id="myInput" type="text" name="myCountry" placeholder="Country">
@@ -197,11 +199,22 @@
                                 <input id="myInput" type="text" name="myBeerstyle" placeholder="Beer Style">
                             </div>
                         </div> -->
-                
-                        <input type="submit" class="btnRegister"  value="Submit"/>
+    
                     </div>
                 </div>
             </form>      
+        </div>
+    </div>
+
+
+    <div class = "container-fluid bg-white" id = "map-section">
+
+        <div class = "row text-center">
+            <h2 class = "subsection-heading-4">Find Your Next Beer</h2>
+        </div>
+
+        <div id = "map">
+
         </div>
     </div>
 

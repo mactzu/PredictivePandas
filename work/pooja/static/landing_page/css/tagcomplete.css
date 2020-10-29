@@ -67,6 +67,7 @@
 	background:#f0e4b5;
 	font-size: 20px;
 	display:block;
+	font-family: "Cinzel";
 	position:relative;
 	border:1px solid #f0e4b5;
 	border-top:0;
@@ -84,6 +85,7 @@
 	display:block;
 	padding:5px 8px 5px 8px;
 	cursor:pointer;
+	font-family: "Cinzel";
 	-moz-user-select:none;
 	-webkit-user-select:none;
 	-ms-user-select:none;
