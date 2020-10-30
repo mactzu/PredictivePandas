@@ -520,15 +520,20 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
         brewery=d[0].brewery_name;
         country=d[0].country;
         description=d[0].description.slice(0,5);
-        
-        
+
+        description_words="" // make description words read nicer
+        for (i=0;i<description.length-1;i++) {
+          description_words=description_words+description[i].charAt(0).toUpperCase()+description[i].slice(1)+", "
+        }
+        description_words=description_words+description[description.length-1].charAt(0).toUpperCase()+description[description.length-1].slice(1)
+
         markers.addLayer(L.marker([lat,lng],{icon: beerIcon}).addTo(myFeatureBeers).bindPopup("<h4><a href = 'https://www.beeradvocate.com/beer/profile/"+brewery_id+"/"+beer_id+"'target='_blank'>" + beer_name +
                                                                                                             "</a></h4><hr><p>"+'Brewery: ' + brewery +
                                                                                                             '<br>' + "Availability: " + availability +
-                                                                                                            '<br>' + "Alcohol by Volume: " + abv + 
-                                                                                                            '<br>' + "Strength: " + beerStrength +
-                                                                                                            '<br>' + "Style: " + beerStyle +
-                                                                                                            '<br>' + "Description: " + description + "</p>"));
+                                                                                                            '<br>' + "Alcohol by Volume (ABV): " + abv + 
+                                                                                                            '%<br>' + "Strength: " + beerStrength +
+                                                                                                            '<br>' + "Style: " + beerStyle.charAt(0).toUpperCase() + beerStyle.slice(1) +
+                                                                                                            '<br>' + "Description: " + description_words + "</p>"));
                                                                                                             
                                                                                                           })
       
