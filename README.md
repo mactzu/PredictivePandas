@@ -22,7 +22,7 @@
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
-* [Directory Tree](#tree)
+* [Project Tree](#project-tree)
 * [Usage Example](#usage)
 * [Getting Started](#getting-started)
   * [Heroku](#heroku)
@@ -41,23 +41,22 @@
 When starting out on this project we were told to 'pick something we were passionate about'.  Well, that was easy - food and alcohol ... some of the greatest joys in life, right?  We knew we wanted to create a recommendation engine and as we started looking around we found plenty.  Restaurant recommenders, cuisine recommenders, locality based recommenders and of course the wine recommenders.  But what about beer?  Not too many out there.  Whilst worldwide beer consumption is on the decline, the interest in craft beer is surging.  Driven by passionate home brewers and craft beer makers, together with increasingly more sophisticated beer drinkers, the choices are growing and exponentially.  So how do you find that illusive 'best' beer when you don't even know it's out there?  That's where our model comes in.
 
 
-<!-- DIRECTORY TREE -->
-## Directory Tree
-$ ./tree-md .
-# Project tree
+<!-- PROJECT TREE -->
+## Project Tree
 
+* [config](/config) 
+* [data](/data)
 * [notebooks](/notebooks)
    * [00_DataExtract-Clean](./notebooks/00_DataExtract-Clean.ipynb)
    * [01_DataPrep-ML](./notebooks/01_DataPrep-ML.ipynb)
    * [02_K-Means](./notebooks/02_K-Means.ipynb)
- * [source](/source)
- * [data](/data)
- * [static](/static)
+* [source](/source)
+* [static](/static)
    * [css](./static/css)
    * [images](./static/images)
    * [js](./static/js)
  * [templates](/templates)
- * [.DS_Store](./DS_Store)
+ * [.DS_Store](./.DS_Store)
  * [.gitignore](./.gitignore)
  * [README.md](./README.md)
  * [app.py](./app.py)
