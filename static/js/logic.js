@@ -494,14 +494,19 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
   catch(err) {}
   
   function getBeer(data) {
+    if (data.length==0) {
+      window.alert("Uh-oh! We did not find any beer with your specified criteria! Please try again.")
+    }
     myFeatureBeers.clearLayers();
-  
+    var markers = L.markerClusterGroup();
     for (var i = 0; i < data.length; i += 1) {
       let url="/data/"+data[i]
       d3.json(url).then(function(d) {
         lat=d[0].lat;
         lng=d[0].lng;
-        beer_name=d[0].beer_name
+        beer_name=d[0].beer_name;
+        beer_id=d[0].beer_id;
+        brewery_id=d[0].brewery_id;
         address=d[0].address;
         availability=d[0].availability;
         review_aroma=d[0].review_aroma;
@@ -517,16 +522,17 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
         description=d[0].description.slice(0,5);
         
         
-        marker = L.marker([lat,lng],{icon: beerIcon}).addTo(myFeatureBeers).bindPopup("<h4>" + beer_name +
-                                                                                                            "</h4><hr><p>"+'Brewery: ' + brewery +
+        markers.addLayer(L.marker([lat,lng],{icon: beerIcon}).addTo(myFeatureBeers).bindPopup("<h4><a href = 'https://www.beeradvocate.com/beer/profile/"+brewery_id+"/"+beer_id+"'target='_blank'>" + beer_name +
+                                                                                                            "</a></h4><hr><p>"+'Brewery: ' + brewery +
                                                                                                             '<br>' + "Availability: " + availability +
                                                                                                             '<br>' + "Alcohol by Volume: " + abv + 
                                                                                                             '<br>' + "Strength: " + beerStrength +
                                                                                                             '<br>' + "Style: " + beerStyle +
-                                                                                                            '<br>' + "Description: " + description + "</p>");
+                                                                                                            '<br>' + "Description: " + description + "</p>"));
                                                                                                             
                                                                                                           })
       
     }
+    myMap.addLayer(markers);
     myMap.fitBounds(myFeatureBeers.getBounds());
   }
