@@ -155,6 +155,7 @@ def predict():
 
     beer_strength_all=["light","mid","full","heavy","very strong"]
     beer_abv_all=[1,3.5,5,7.5,10.5]
+    beer_abv=5 #default
     beer_strength_val=[0]*5
     for i in range(len(beer_strength_all)):
         if beer_strength[0]==beer_strength_all[i]:
@@ -173,20 +174,24 @@ def predict():
 
     # create subset dataframe of specific cluster
     alldata=pd.DataFrame()
-    for i in country:
-        data=beerdata[beerdata["country"]==i]
-        alldata=alldata.append(data)
-    beerdata=alldata
-    alldata=pd.DataFrame()
-    for i in beer_style:
-        data=beerdata[beerdata["beer_style"]==i]
-        alldata=alldata.append(data)
-    beerdata=alldata
+    if len(country[0])>0: # if users select a country
+        for i in country:
+            data=beerdata[beerdata["country"]==i]
+            alldata=alldata.append(data)
+        beerdata=alldata
+        alldata=pd.DataFrame()
+
+    if len(beer_style[0])>0: # if users select a style
+        for i in beer_style:
+            data=beerdata[beerdata["beer_style"]==i]
+            alldata=alldata.append(data)
+        beerdata=alldata
     
     beer_id=[]
     
     if len(beerdata)<6:
-        beer_id=beerdata["beer_id"].array
+        for i,r in beerdata.iterrows():
+            beer_id.append(r["beer_id"])
     else: 
         # add user input to dataframe in order to calculate cosine similarity
         matrix=pd.DataFrame()
@@ -213,7 +218,8 @@ def predict():
         beers_index = [i[0] for i in similarity_scores]
     
         for i in beers_index:
-            beer_id.append(beerdata.iloc[i,2])   
+            if beerdata.iloc[i,2] == beerdata.iloc[i,2]:
+                beer_id.append(beerdata.iloc[i,2])   
 
     return render_template('index.html', prediction_text=beer_id,scroll='#map-section')
 
