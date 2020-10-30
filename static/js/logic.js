@@ -464,7 +464,6 @@ function autocomplete(inp, arr) {
 autocomplete(document.getElementById("countryInput"), countries);
 
 // Map Section 
-var API_KEY = "pk.eyJ1IjoicG1hbGxhcmQiLCJhIjoiY2tnc3B5eWc1MDI3NzJ4cHQ5anIwbnpoeCJ9.2LB0cYAMj8pOZ-QgyecGxA";
 
 // Creating our initial map object
 // We set the longitude, latitude, and the starting zoom level
