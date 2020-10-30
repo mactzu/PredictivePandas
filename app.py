@@ -7,9 +7,6 @@ from flask import (
     render_template,
     request,
     jsonify)
-#from flask_sqlalchemy import SQLAlchemy
-#from sqlalchemy import create_engine
-#from sqlalchemy.sql import text
 import pandas as pd
 import numpy as np
 import joblib
@@ -20,27 +17,6 @@ from sklearn.metrics.pairwise import linear_kernel
 #################################################
 app = Flask(__name__)
 model=joblib.load("./data/kmean_model_final.sav")
-
-#################################################
-# Database Setup
-#################################################
-
-## if running locally, run the following line in the terminal before running the app.py
-## where username and password are your postgres username and password
-#################################################
-#export DATABASE_URL=postgresql://username:password@localhost/property
-
-#################################################
-
-#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '') or "sqlite:///db.sqlite"
-
-# Remove tracking modifications
-#app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-#db = SQLAlchemy(app)
-
-# create and connect to engine
-#engine=db.engine
 
 #################################################
 
@@ -126,7 +102,7 @@ def beer(beerid):
 
     return jsonify(beerdata)   
 
-# to do - prediction with ML
+# prediction with ML
 @app.route('/',methods=['POST'])
 def predict():
     # user input, to change
@@ -173,19 +149,11 @@ def predict():
     cluster=model.predict(userInput)
 
     # create subset dataframe of specific cluster
-    alldata=pd.DataFrame()
     if len(country[0])>0: # if users select a country
-        for i in country:
-            data=beerdata[beerdata["country"]==i]
-            alldata=alldata.append(data)
-        beerdata=alldata
-        alldata=pd.DataFrame()
+        beerdata=beerdata[beerdata["country"]==country[0]]
 
     if len(beer_style[0])>0: # if users select a style
-        for i in beer_style:
-            data=beerdata[beerdata["beer_style"]==i]
-            alldata=alldata.append(data)
-        beerdata=alldata
+        beerdata=beerdata[beerdata["beer_style"]==beer_style[0]]
     
     beer_id=[]
     
@@ -195,20 +163,22 @@ def predict():
     else: 
         # add user input to dataframe in order to calculate cosine similarity
         matrix=pd.DataFrame()
-        for i in range(14,189):
-            matrix[beerdata.columns[i]]=beerdata[beerdata.columns[i]]/beerdata["numberof_reviews"]
-        matrix["Kmeans Cluster"]=beerdata["Kmeans Cluster"]
+        beerdata["termsum"]=beerdata.iloc[:,14:190].sum(axis=1)+1 # create something akin to 'document freq' for tf-idf, plus one to account for added term of cluster
+        for i in range(14,190):
+            matrix[beerdata.columns[i]]=beerdata[beerdata.columns[i]]/beerdata["termsum"]
         matLen=len(matrix)
-        for i in range(14,189):    
+        for i in range(14,190): # add user input to the matrix   
+            matrix.loc[matLen,beerdata.columns[i]]=0  
             for j in words:
-                if beerdata.columns[i]==j:
-                    matrix.loc[matLen,beerdata.columns[i]]=1
-                else:
-                    matrix.loc[matLen,beerdata.columns[i]]=0
+                if j==beerdata.columns[i]:
+                    matrix.loc[matLen,beerdata.columns[i]]=1/(len(words)+1)
         # add cluster
-        beerdata.loc[matLen,"Kmeans Cluster"]=cluster[0]
+        matrix["Kmeans Cluster"]=beerdata["Kmeans Cluster"] # treat cluster as terms for cosine similarity
+        matrix.loc[matLen,"Kmeans Cluster"]=cluster[0]
         matrix_bin=pd.get_dummies(matrix, columns=["Kmeans Cluster"])
-        
+        beerdata.loc[len(beerdata),"termsum"]=len(words)+1 # 'document freq' for user input
+        for i in range(176,len(matrix_bin.columns)): 
+            matrix_bin[matrix_bin.columns[i]]=matrix_bin[matrix_bin.columns[i]]/beerdata["termsum"]
         cosine_similarity=linear_kernel(matrix_bin,matrix_bin)
     
         # use similarity score to get most similar beers based on review words
@@ -218,11 +188,11 @@ def predict():
         beers_index = [i[0] for i in similarity_scores]
     
         for i in beers_index:
-            if beerdata.iloc[i,2] == beerdata.iloc[i,2]:
+            if beerdata.iloc[i,2] == beerdata.iloc[i,2]: #remove nan
                 beer_id.append(beerdata.iloc[i,2])   
 
     return render_template('index.html', prediction_text=beer_id,scroll='#map-section')
 
 # run app
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run(debug=True)
