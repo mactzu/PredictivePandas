@@ -469,7 +469,7 @@ autocomplete(document.getElementById("countryInput"), countries);
 // We set the longitude, latitude, and the starting zoom level
 // This gets inserted into the div with an id of 'map'
 var beerIcon = L.icon ({
-  iconUrl: 'http://feedus.media/wp/wp-content/uploads/leaflet-maps-marker-icons/beer_pin-2.png',
+  iconUrl: '/static/images/beer_pin-2.png',
   iconSize: [75, 75]
 })
 var myMap = L.map("map").setView([45, -5], 2);
