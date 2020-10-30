@@ -46,15 +46,19 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return render_template("index.html")
-    
-@app.route('/predict',methods=['POST'])
+
+@app.route("/predict")
 def predict():
-    someval = request.form['somevalue']
-    someotherval = request.form['someotherval']
-    prediction=""
-    ##insert prediction here blablabla as python script##
-    #eg# prediction = model.predict(final_features)
-    return render_template('index.html', prediction_text=prediction)
+    return render_template("predict.html")
+    
+# @app.route('/predict', methods=['POST'])
+# def predict():
+#     someval = request.form['somevalue']
+#     someotherval = request.form['someotherval']
+#     prediction=""
+#     ##insert prediction here blablabla as python script##
+#     #eg# prediction = model.predict(final_features)
+#     return render_template('predict.html', prediction_text=prediction)
 
 # run app
 if __name__ == "__main__":

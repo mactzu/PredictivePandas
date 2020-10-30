@@ -19,7 +19,7 @@ from sklearn.metrics.pairwise import linear_kernel
 # Flask Setup
 #################################################
 app = Flask(__name__)
-model=joblib.load("./data/kmean_model.sav")
+model=joblib.load("./data/kmean_model_final.sav")
 
 #################################################
 # Database Setup
@@ -53,7 +53,7 @@ def home():
 @app.route("/data")
 def data():
     beerdata=[]
-    with open('./data/final_beerdata.csv') as csv_file:
+    with open('./data/final_beerdata.csv', encoding = "utf-8") as csv_file:
         data=csv.reader(csv_file,delimiter=',')
         data_header=next(data)
         for row in data:
@@ -89,15 +89,19 @@ def data():
 @app.route("/data/<beerid>")
 def beer(beerid):
     beerdata=[]
-    with open('./data/final_beerdata.csv') as csv_file:
+    with open('./data/final_beerdata.csv', encoding = "utf-8") as csv_file:
         data=csv.reader(csv_file,delimiter=',')
         data_header=next(data)
         for row in data:
             if row[2]==beerid:
                 descriptor=[]
-                for col in range(14,190):
+                count=[]
+                for col in range(14,189):
                     if int(row[col])>1:
-                        descriptor.append({data_header[col]:row[col]})
+                        descriptor.append(data_header[col])
+                        count.append(int(row[col]))
+                keydict=dict(zip(descriptor,count))
+                descriptor.sort(key=keydict.get,reverse=True)
                 beerdata.append({
                     "brewery_id":row[0],
                     "brewery_name":row[1],
@@ -123,46 +127,40 @@ def beer(beerid):
     return jsonify(beerdata)   
 
 # to do - prediction with ML
-@app.route('/predict')
+@app.route('/',methods=['POST'])
 def predict():
     # user input, to change
-    # beerstrength=request.form['beerstrength']
-    # overall=request.form['overallscore']
-    # aroma=request.form['aroma']
-    # appearance=request.form['appearance']
-    # palate=request.form['palate']
-    # taste=request.form['taste']
-    # beer_style=request.form['beerstyle']
-    # words=["sweet","hay","toast","gentle","bubbly"] #to change
+    beer_strength=request.form['beerstrength'].split(',')
+    beer_style=request.form['beerstyle'].split(',')
+    country=request.form['country'].split(',')
+    words=request.form['taste-preference'].split(',')
+    aroma=5-(int(request.form['aromaRank'])-1)
+    appearance=5-(int(request.form['appearanceRank'])-1)
+    taste=5-(int(request.form['tasteRank'])-1)
 
-    country="USA"
-    beer_strength="Full"
-    overall=4 #not needed
-    aroma=3
-    appearance=5
-    palate=2 #not needed
-    taste=5
-    beer_style="bitter"
-    words=["carbonation","malty","sweet"] #to remove hardcoding
+    # #default
+    beerdata=pd.read_csv("./data/final_beerdata_cluster.csv")
+    numberof_reviews=beerdata["numberof_reviews"].median()
+    overall=4
+    palate=4
 
     # data manipulation, don't change
     # not user input
-    beer_style_all=["ale","barleywine","bitter","exotic","ipa","kölsch","lager","pilsener","porter","stout","trappist"]
+    beer_style_all=["ale","barleywine","bitter","exotic","ipa","kolsch","lager","pilsener","porter","stout","trappist"]
     beer_style_val=[0]*11
     for i in range(len(beer_style_all)):
-        if beer_style==beer_style_all[i]:
-            beer_style_val[i]=1
+        for j in beer_style:
+            if j==beer_style_all[i]:
+                beer_style_val[i]=1
 
-    beer_strength_all=["Light","Mid","Full","Heavy","Very Strong"]
+    beer_strength_all=["light","mid","full","heavy","very strong"]
     beer_abv_all=[1,3.5,5,7.5,10.5]
+    beer_abv=5 #default
     beer_strength_val=[0]*5
     for i in range(len(beer_strength_all)):
-        if beer_strength==beer_strength_all[i]:
+        if beer_strength[0]==beer_strength_all[i]:
             beer_strength_val[i]=1
             beer_abv=beer_abv_all[i]
-
-    beerdata=pd.read_csv("./data/beerlist_w_Kmean.csv")
-    numberof_reviews=beerdata["numberof_reviews"].median()
     
     # predict cluster
     userInput=np.array([[beer_abv,numberof_reviews,overall,aroma,
@@ -175,25 +173,43 @@ def predict():
     cluster=model.predict(userInput)
 
     # create subset dataframe of specific cluster
-    beerdata=beerdata[beerdata["Kmeans Cluster"]==cluster[0]]
+    alldata=pd.DataFrame()
+    if len(country[0])>0: # if users select a country
+        for i in country:
+            data=beerdata[beerdata["country"]==i]
+            alldata=alldata.append(data)
+        beerdata=alldata
+        alldata=pd.DataFrame()
+
+    if len(beer_style[0])>0: # if users select a style
+        for i in beer_style:
+            data=beerdata[beerdata["beer_style"]==i]
+            alldata=alldata.append(data)
+        beerdata=alldata
     
     beer_id=[]
     
     if len(beerdata)<6:
-        beer_id=beerdata["beer_id"].array
+        for i,r in beerdata.iterrows():
+            beer_id.append(r["beer_id"])
     else: 
         # add user input to dataframe in order to calculate cosine similarity
         matrix=pd.DataFrame()
-        for i in range(12,187):
+        for i in range(14,189):
             matrix[beerdata.columns[i]]=beerdata[beerdata.columns[i]]/beerdata["numberof_reviews"]
+        matrix["Kmeans Cluster"]=beerdata["Kmeans Cluster"]
         matLen=len(matrix)
-        for i in range(12,187):    
+        for i in range(14,189):    
             for j in words:
                 if beerdata.columns[i]==j:
                     matrix.loc[matLen,beerdata.columns[i]]=1
                 else:
                     matrix.loc[matLen,beerdata.columns[i]]=0
-        cosine_similarity=linear_kernel(matrix,matrix)
+        # add cluster
+        beerdata.loc[matLen,"Kmeans Cluster"]=cluster[0]
+        matrix_bin=pd.get_dummies(matrix, columns=["Kmeans Cluster"])
+        
+        cosine_similarity=linear_kernel(matrix_bin,matrix_bin)
     
         # use similarity score to get most similar beers based on review words
         similarity_scores = list(enumerate(cosine_similarity[len(cosine_similarity)-1]))
@@ -202,9 +218,10 @@ def predict():
         beers_index = [i[0] for i in similarity_scores]
     
         for i in beers_index:
-            beer_id.append(beerdata.iloc[i,2])   
-    
-    return render_template('index.html', prediction_text=beer_id)
+            if beerdata.iloc[i,2] == beerdata.iloc[i,2]:
+                beer_id.append(beerdata.iloc[i,2])   
+
+    return render_template('index.html', prediction_text=beer_id,scroll='#map-section')
 
 # run app
 if __name__ == "__main__":
