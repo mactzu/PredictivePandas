@@ -22,7 +22,7 @@
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
-* [Project Tree](#tree)
+* [Project Tree](#project-tree)
 * [Usage Example](#usage)
 * [Getting Started](#getting-started)
   * [Heroku](#heroku)
@@ -42,7 +42,7 @@ When starting out on this project we were told to 'pick something we were passio
 
 
 <!-- PROJECT TREE -->
-## tree
+## Project Tree
 
 * [config](/config) 
 * [data](/data)
