@@ -53,7 +53,7 @@ def home():
 @app.route("/data")
 def data():
     beerdata=[]
-    with open('./data/final_beerdata.csv') as csv_file:
+    with open('./data/final_beerdata.csv', encoding = "utf-8") as csv_file:
         data=csv.reader(csv_file,delimiter=',')
         data_header=next(data)
         for row in data:
@@ -89,7 +89,7 @@ def data():
 @app.route("/data/<beerid>")
 def beer(beerid):
     beerdata=[]
-    with open('./data/final_beerdata.csv') as csv_file:
+    with open('./data/final_beerdata.csv', encoding = "utf-8") as csv_file:
         data=csv.reader(csv_file,delimiter=',')
         data_header=next(data)
         for row in data:
