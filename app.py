@@ -126,8 +126,8 @@ def beer(beerid):
 @app.route('/',methods=['POST'])
 def predict():
     # user input, to change
-    beer_strength=request.form['beerstrength']
-    beer_style=request.form['beerstyle']
+    beer_strength=request.form['beerstrength'].split(',')
+    beer_style=request.form['beerstyle'].split(',')
     country=request.form['country'].split(',')
     words=request.form['taste-preference'].split(',')
     aroma=5-(int(request.form['aromaRank'])-1)
@@ -153,7 +153,7 @@ def predict():
     beer_abv_all=[1,3.5,5,7.5,10.5]
     beer_strength_val=[0]*5
     for i in range(len(beer_strength_all)):
-        if beer_strength==beer_strength_all[i]:
+        if beer_strength[0]==beer_strength_all[i]:
             beer_strength_val[i]=1
             beer_abv=beer_abv_all[i]
     
