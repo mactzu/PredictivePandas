@@ -43,9 +43,6 @@ slider2.oninput = function() {
 
 
 
-// Drop down 
-var beer_strength = ["light", "mild", "full", "strong", "heavy"];
-
 
 
 
