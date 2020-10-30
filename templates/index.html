@@ -187,15 +187,10 @@
                             <br>
                             <p class = "counter">Appearance Ranking: <span id="demo2"></span></p>
                         </div> 
-
-
-
-                        
-                    
- 
-    
+  
                     </div>
                 </div>
+                
                 <div class = "row text-center">
                     <button class = "btn js-scroll-trigger" type = "submit" id = "map-button" href = "#map-section">Get me a beer</button>
                 </div>
@@ -203,20 +198,21 @@
             </form>      
         </div>
     </div>
-
-    <!-- data is the array to use for map -->
-    <script type="text/javascript">
-    var data = {{ prediction_text }}
+    <script type = "text/javascript">
+        var data = {{ prediction_text }}
     </script>
 
+
     <div class = "container-fluid bg-white" id = "map-section">
-        <script>
+        <script type = "text/javascript">
             document.location.hash = '{{ scroll }}';
         </script>
+  
         <div class = "row text-center">
             <h2 class = "subsection-heading-4">Find Your Next Beer</h2>
         </div>
         <div id = "map">
+            
         </div>
     </div>
 

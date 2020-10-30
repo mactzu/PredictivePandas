@@ -44,13 +44,6 @@ slider2.oninput = function() {
 
 
 
-
-
-
-// document.getElementById("saveForm").onclick = function() {
-//     location.href = "/predict"
-// }
-
 var countries = [
     "Argentina",
     "Armenia",
@@ -368,94 +361,6 @@ $(function(){
 });
 
 
-// Map Section 
-// var API_KEY = "pk.eyJ1IjoicG1hbGxhcmQiLCJhIjoiY2tnc3B5eWc1MDI3NzJ4cHQ5anIwbnpoeCJ9.2LB0cYAMj8pOZ-QgyecGxA";
-​
-​
-// Creating our initial map object
-// We set the longitude, latitude, and the starting zoom level
-// This gets inserted into the div with an id of 'map'
-// var beerIcon = L.icon ({
-//   iconUrl: 'http://feedus.media/wp/wp-content/uploads/leaflet-maps-marker-icons/beer_pin-2.png',
-//   iconSize: [75, 75]
-// })
-// var myMap = L.map("map").setView([45, -5], 2);
-// var myFeatureBeers = L.featureGroup().addTo(myMap);
-// var marker;
-​
-​
-​
-// Adding a tile layer (the background map image) to our map
-// We use the addTo method to add objects to our map
-// L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
-//   attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
-//   tileSize: 512,
-//   maxZoom: 18,
-//   zoomOffset: -1,
-//   id: "mapbox/streets-v11",
-//   accessToken: API_KEY
-//   }).addTo(myMap);
-​
-// try {
-//   getBeer(data)
-// }
-// catch(err) {}
-// ​
-// function getBeer(data) {
-//   // myFeatureBeers.clearLayers();
-// ​
-//   for (var i = 0; i < data.length; i += 1) {
-//     let url="/data/"+data[i]
-//     d3.json(url).then(function(d) {
-//       lat=d[0].lat;
-//       lng=d[0].lng;
-//       beer_name=d[0].beer_name
-//       address=d[0].address;
-//       availability=d[0].availability;
-//       review_aroma=d[0].review_aroma;
-//       review_appearance=d[0].review_appearance;
-//       review_palate=d[0].review_palate;
-//       review_taste=d[0].review_taste;
-//       review_overall=d[0].review_overall;
-//       abv=d[0].beer_abv;
-//       beerStrength=d[0].beer_strength;
-//       beerStyle=d[0].beer_style;
-//       brewery=d[0].brewery_name;
-//       country=d[0].country;
-//       description=d[0].description.slice(0,5);
-      
-      
-//       marker = L.marker([lat,lng],{icon: beerIcon}).addTo(myFeatureBeers).bindPopup("<h4>" + beer_name +
-//           "</h4><hr><p>"+'Brewery: ' + brewery +
-//           '<br>' + "Availability: " + availability +
-//           '<br>' + "Alcohol by Volume: " + abv + 
-//           '<br>' + "Strength: " + beerStrength +
-//           '<br>' + "Style: " + beerStyle +
-//           '<br>' + "Description: " + description + "</p>");
-                                                                                                          
-//       })
-    
-//   }
-//   myMap.fitBounds(myFeatureBeers.getBounds());
-// }
-
-
-// var mapmargin = 50;
-// $('#map').css("height", ($(window).height() - mapmargin));
-// $(window).on("resize", resize);
-// resize();
-// function resize(){
-
-//     if($(window).width()>=980){
-//         $('#map').css("height", ($(window).height() - mapmargin));    
-//         $('#map').css("margin-top",50);
-//     }else{
-//         $('#map').css("height", ($(window).height() - (mapmargin+12)));    
-//         $('#map').css("margin-top",-10);
-//     }
-
-// }
-
 
 
 // country autocomplete
@@ -557,3 +462,72 @@ function autocomplete(inp, arr) {
   }
 
 autocomplete(document.getElementById("countryInput"), countries);
+
+// Map Section 
+var API_KEY = "pk.eyJ1IjoicG1hbGxhcmQiLCJhIjoiY2tnc3B5eWc1MDI3NzJ4cHQ5anIwbnpoeCJ9.2LB0cYAMj8pOZ-QgyecGxA";
+
+// Creating our initial map object
+// We set the longitude, latitude, and the starting zoom level
+// This gets inserted into the div with an id of 'map'
+var beerIcon = L.icon ({
+  iconUrl: 'http://feedus.media/wp/wp-content/uploads/leaflet-maps-marker-icons/beer_pin-2.png',
+  iconSize: [75, 75]
+})
+var myMap = L.map("map").setView([45, -5], 2);
+var myFeatureBeers = L.featureGroup().addTo(myMap);
+var marker;
+
+
+// Adding a tile layer (the background map image) to our map
+// We use the addTo method to add objects to our map
+L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+  attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
+  tileSize: 512,
+  maxZoom: 18,
+  zoomOffset: -1,
+  id: "mapbox/streets-v11",
+  accessToken: API_KEY
+  }).addTo(myMap);
+
+  try {
+    getBeer(data)
+  }
+  catch(err) {}
+  
+  function getBeer(data) {
+    myFeatureBeers.clearLayers();
+  
+    for (var i = 0; i < data.length; i += 1) {
+      let url="/data/"+data[i]
+      d3.json(url).then(function(d) {
+        lat=d[0].lat;
+        lng=d[0].lng;
+        beer_name=d[0].beer_name
+        address=d[0].address;
+        availability=d[0].availability;
+        review_aroma=d[0].review_aroma;
+        review_appearance=d[0].review_appearance;
+        review_palate=d[0].review_palate;
+        review_taste=d[0].review_taste;
+        review_overall=d[0].review_overall;
+        abv=d[0].beer_abv;
+        beerStrength=d[0].beer_strength;
+        beerStyle=d[0].beer_style;
+        brewery=d[0].brewery_name;
+        country=d[0].country;
+        description=d[0].description.slice(0,5);
+        
+        
+        marker = L.marker([lat,lng],{icon: beerIcon}).addTo(myFeatureBeers).bindPopup("<h4>" + beer_name +
+                                                                                                            "</h4><hr><p>"+'Brewery: ' + brewery +
+                                                                                                            '<br>' + "Availability: " + availability +
+                                                                                                            '<br>' + "Alcohol by Volume: " + abv + 
+                                                                                                            '<br>' + "Strength: " + beerStrength +
+                                                                                                            '<br>' + "Style: " + beerStyle +
+                                                                                                            '<br>' + "Description: " + description + "</p>");
+                                                                                                            
+                                                                                                          })
+      
+    }
+    myMap.fitBounds(myFeatureBeers.getBounds());
+  }

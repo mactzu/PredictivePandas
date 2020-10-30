@@ -1,516 +1,525 @@
 /*Main Body*/
 body, html {
-  scroll-behavior: smooth;
-  height: 100%;
-
-}
-
-/* Container Fluid - Hero Image */
-.container-fluid {
+    scroll-behavior: smooth;
     height: 100%;
-    margin: 0;
-} 
-
-.container-fluid {
+  
+  }
+  
+  /* Container Fluid - Hero Image */
+  .container-fluid {
+      height: 100%;
+      margin: 0;
+  } 
+  
+  .container-fluid {
+      height: 100%;
+      margin: 0;
+  } 
+  
+  /* Hero Image  */
+  .hero-image {
+    background-image: url("https://images.unsplash.com/photo-1529877612930-6e7df7e2b02f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
     height: 100%;
-    margin: 0;
-} 
-
-/* Hero Image  */
-.hero-image {
-  background-image: url("https://images.unsplash.com/photo-1529877612930-6e7df7e2b02f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-/* Logo */
-.responsive {
-    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
-    margin: auto;  
-}
-
-
-/* Hero Text Headings */
-.subheading {
-    line-height: 30px;
-    margin-top: -1%;
-    margin-bottom: 30px;
-    font-family: "Cinzel";
-    font-size: 60px;
-    color:rgb(240, 228, 181);
-}
-
-.subheading-1 {
-    font-size: 30px;
-    line-height: 10px;
-    font-family: "Cinzel";
-    color:rgb(240, 228, 181);
-} 
-
-
-/* Explore Button */
-
-#about-button.btn {
-    border: none;
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #dd953f;
-    font-family: "Cinzel";
-    font-size: 25px;
-    cursor: pointer;
-    border-radius: 4px;
-    color:  black;
-}
-
-#about-button.btn:hover {background: rgb(240, 228, 181)} 
-
-
-/* Preferences Button */
-/* 
-#pref-button.btn {
-    border: none;
-    position: absolute;
-    background-color: #dd953f;
-    font-family: "Cinzel";
-    font-size: 25px;
-    cursor: pointer;
-    border-radius: 4px;
-    color:  black;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 1%;
-    
-} */
-
-
-/* Get me a beer Button */
-
-button.btn {
-    border: none;
-    position: absolute;
-    background-color: #dd953f;
-    font-family: "Cinzel";
-    font-size: 25px;
-    cursor: pointer;
-    border-radius: 4px;
-    color:  black;
-    left: 50%;
-    transform: translate(-50%, -50%);
-   
-}
-
-
-
-
-/* ABOUT SECTION */
-
-
-/* What is BeerNext? */
-#about h2.section-heading {
-    font-size: 4rem;
-    font-family: "Cinzel";
-    margin-top: 3%;
-}
-
-/* BeerNext Intro Paragraph */
-#about, p {
-    margin-top: 2%;
-    font-size: 20px;
-    font-family: "Droid Serif";
-}
-
-
-/* DEALING WITH FLEX CONTAINERS FEATURES SECTION*/ 
-
-.flex-container#features {
-    display:flex;
-    flex-wrap: wrap;
-    height: 100%;
-    margin-top: 3%;
-}
-
-.flex-container#features hr {
-    width: 100%;
-    margin: 0%;
-    align-self: stretch;
-}
-
-/* The Features of Beer Heading */
-#features h2.subsection-heading {
-    font-size: 4rem;
-    font-family: "Cinzel";
-    width: 100%;
-    margin-top: 3%;
-}
-
-
-/* Feature Explanation Paragraphs */
-.text-muted {
-    margin-top: -15%;
-    font-family: "Droid Serif";
-    font-size: 18px;  
-}
-
-/* Bottle Caps PNG */
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -15%;    
-}
-
-
-
-/* PREFERENCE SECTION */
-
-.container-fluid.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    overflow: auto;
-}
-
-.container-fluid#preferences {
-    margin-top: 6%;
-}
-
-.flex-container h2.subsection-heading-1 {
-    font-size: 4rem;
-    font-family: "Cinzel";
-    width: 100%;
-    margin-top: 3%;
-}
-
-
-.flex-container h3.subsection-heading-2 {
-    font-size: 2.5rem;
-    font-family: "Cinzel";
-    margin-left: 0.5%;
-    margin-top: 3%;
-    text-align: left;
-}
-
-.row h3.subsection-heading-3 {
-    font-size: 2.5rem;
-    font-family: "Cinzel";
-    margin-top: 3%;
-    margin-left: 15%;
-    text-align: left;
-}
-
-
-/* FORM SECTION */
-label#featureWords {
-    font-size: 15px;
-}
-
-label#ranking {
-    font-size: 15px;
-    margin-left: 15%;
-    text-align: left;
-}
-.row {
-    margin-top: 1%;
-    margin-left: 4%;
-    margin-right: 4%;
-}
-.form-group#taste {
-    margin-top: 5%;
-    width:80%;
-}
-
-.form-group#style {
-    margin-top: 5%;
-    width:80%;
-}
-
-
-/* form group labels */
-label {
+  }
+  
+  /* Logo */
+  .responsive {
+      display: block;
+      position: relative;
+      margin: auto;  
+  }
+  
+  
+  /* Hero Text Headings */
+  .subheading {
+      line-height: 30px;
+      margin-top: -1%;
+      margin-bottom: 30px;
+      font-family: "Cinzel";
+      font-size: 60px;
+      color:rgb(240, 228, 181);
+  }
+  
+  .subheading-1 {
+      font-size: 30px;
+      line-height: 10px;
+      font-family: "Cinzel";
+      color:rgb(240, 228, 181);
+  } 
+  
+  
+  /* Explore Button */
+  
+  #about-button.btn {
+      border: none;
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #dd953f;
+      font-family: "Cinzel";
+      font-size: 25px;
+      cursor: pointer;
+      border-radius: 4px;
+      color:  black;
+  }
+  
+  #about-button.btn:hover {background: rgb(240, 228, 181)} 
+  
+  
+  /* Preferences Button */
+  /* 
+  #pref-button.btn {
+      border: none;
+      position: absolute;
+      background-color: #dd953f;
+      font-family: "Cinzel";
+      font-size: 25px;
+      cursor: pointer;
+      border-radius: 4px;
+      color:  black;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin-top: 1%;
+      
+  } */
+  
+  
+  /* Get me a beer Button */
+  
+  button.btn {
+      border: none;
+      position: absolute;
+      background-color: #dd953f;
+      font-family: "Cinzel";
+      font-size: 25px;
+      cursor: pointer;
+      border-radius: 4px;
+      color:  black;
+      left: 50%;
+      transform: translate(-50%, -50%);
+     
+  }
+  
+  
+  
+  
+  /* ABOUT SECTION */
+  
+  
+  /* What is BeerNext? */
+  #about h2.section-heading {
+      font-size: 4rem;
+      font-family: "Cinzel";
+      margin-top: 3%;
+  }
+  
+  /* BeerNext Intro Paragraph */
+  #about, p {
+      margin-top: 2%;
+      font-size: 20px;
+      font-family: "Droid Serif";
+  }
+  
+  
+  /* DEALING WITH FLEX CONTAINERS FEATURES SECTION*/ 
+  
+  .flex-container#features {
+      display:flex;
+      flex-wrap: wrap;
+      height: 100%;
+      margin-top: 3%;
+  }
+  
+  .flex-container#features hr {
+      width: 100%;
+      margin: 0%;
+      align-self: stretch;
+  }
+  
+  /* The Features of Beer Heading */
+  #features h2.subsection-heading {
+      font-size: 4rem;
+      font-family: "Cinzel";
+      width: 100%;
+      margin-top: 3%;
+  }
+  
+  
+  /* Feature Explanation Paragraphs */
+  .text-muted {
+      margin-top: -15%;
+      font-family: "Droid Serif";
+      font-size: 18px;  
+  }
+  
+  /* Bottle Caps PNG */
+  img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: -15%;    
+  }
+  
+  
+  
+  /* PREFERENCE SECTION */
+  
+  .container-fluid.flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      overflow: auto;
+  }
+  
+  .container-fluid#preferences {
+      margin-top: 6%;
+  }
+  
+  .flex-container h2.subsection-heading-1 {
+      font-size: 4rem;
+      font-family: "Cinzel";
+      width: 100%;
+      margin-top: 3%;
+  }
+  
+  
+  .flex-container h3.subsection-heading-2 {
+      font-size: 2.5rem;
+      font-family: "Cinzel";
+      margin-left: 0.5%;
+      margin-top: 3%;
+      text-align: left;
+  }
+  
+  .row h3.subsection-heading-3 {
+      font-size: 2.5rem;
+      font-family: "Cinzel";
+      margin-top: 3%;
+      margin-left: 15%;
+      text-align: left;
+  }
+  
+  
+  /* FORM SECTION */
+  label#featureWords {
+      font-size: 15px;
+  }
+  
+  label#ranking {
+      font-size: 15px;
+      margin-left: 15%;
+      text-align: left;
+  }
+  .row {
+      margin-top: 1%;
+      margin-left: 4%;
+      margin-right: 4%;
+  }
+  .form-group#taste {
+      margin-top: 5%;
+      width:80%;
+  }
+  
+  .form-group#style {
+      margin-top: 5%;
+      width:80%;
+  }
+  
+  
+  /* form group labels */
+  label {
+        font-family: "Cinzel";
+        font-size: 20px;
+        font-weight: lighter;
+  }
+  
+  
+  
+  
+  /* SLIDER */
+  
+  .slider {
+      -webkit-appearance: none;
+      max-width: 70%;
+      height: 15px;
+      border-radius: 5px;
+      background: #f0e4b5;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100px;
+      height: 100px;
+      border: 0;
+      background-image: url("../../slider.png");
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+      width: 150px;
+      height: 150px;
+      border: 0;
+      background: url("../../slider.png");
+      cursor: pointer;
+  }
+  
+  
+  p.counter {
+      text-align: center;
+      margin-top: 15px;
       font-family: "Cinzel";
       font-size: 20px;
-      font-weight: lighter;
-}
-
-
-
-
-/* SLIDER */
-
-.slider {
-    -webkit-appearance: none;
-    max-width: 70%;
-    height: 15px;
-    border-radius: 5px;
-    background: #f0e4b5;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-}
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 100px;
-    height: 100px;
-    border: 0;
-    background-image: url("../../slider.png");
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-    width: 150px;
-    height: 150px;
-    border: 0;
-    background: url("../../slider.png");
-    cursor: pointer;
-}
-
-
-p.counter {
-    text-align: center;
-    margin-top: 15px;
-    font-family: "Cinzel";
-    font-size: 20px;
-}
-
-.slider:hover {
-    opacity: 1;
-}
-
-input[type = "range"] {
-    width: 1000px;
-    margin: auto;
-    display: block;
-    margin-top: 5%;
-}
-
-input[type = "image"] {
-    max-width: 100%;
-    height: auto;
-    margin-left: 25%;
-    display: block;
-    position: relative;
-    border: none;
-    outline: none;
-} 
-
-
-
-
-
-/* Dropdowns: Beer Strength and Beer Style */
-
-.form-group#beerstrength {
-    margin-top: 5%;
-}
-
-#selStrength {
-    width: 70%;
-    height: 50px;
-    border-radius:3px;
-    min-height:10px !important;
-    border:1px solid #bcbcbc;
-   
-}
-
-.form-control {
-    font-size: 18px;
-}
-
-select {
-    font-family: "Cinzel";
-}
-
-
-
-
-
-/* MAP SECTION */
-
-.container-fluid h2.subsection-heading-4 {
-    font-size: 4rem;
-    font-family: "Cinzel";
-    width: 100%;
-    margin-top: 3%;
-}
-
-#map {
-
-    position: relative;
-    border-radius: 30px;
-    height: 700px;
-    width: 100%;  
-    margin-top: 5%;
-    overflow: hidden;
-}
-
-.container-fluid#map-section {
-    margin-top: 0%;
-}
-
-
-
-/* Country Autocomplete Styling */
-
-body {
-  font: 18px "Cinzel";
-}
-.autocomplete {
-  /*the container must be positioned relative:*/
-  position: relative;
-  display: inline-block;
-  margin-top: 0%;
-}
-input {
-  border:1px solid #b0bec5;
-
-  border-radius: 3px;
-  padding: 10px;
-  font-size: 18px;
-}
-input[type=text] {
-  background-color: #fcfdff;
-  width: 100%;
-}
-input[type=submit] {
-  background-color: DodgerBlue;
-  color: #fff;
-}
-.autocomplete-items {
-  position: absolute;
-  border: 1px solid #d4d4d4;
-  border-bottom: none;
-  border-top: none;
-  z-index: 99;
-  /*position the autocomplete items to be the same width as the container:*/
-  top: 100%;
-  left: 0;
-  right: 0;
-}
-.autocomplete-items div {
-  padding: 10px;
-  cursor: pointer;
-  background-color: #fff;
-  border-bottom: 1px solid #d4d4d4;
-}
-.autocomplete-items div:hover {
-  /*when hovering an item:*/
-  background-color: #e9e9e9;
-}
-.autocomplete-active {
-    /*when navigating through the items using the arrow keys:*/
-    background-color: DodgerBlue !important;
-    color: #ffffff;
   }
-
-/* Media Queries Section */ 
-
-
-/* For desktop: */
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  [class*="col-"] {
-    width: 100%;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-    /* For desktop: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-  }
-
-/* Media Queries */
-
-@media screen and (max-width: 880px) {
-    .subheading {
-        font-size: 40px
-    }
-    .subheading-1 {
-        font-size: 20px;
-    }
-}
-
-
-@media screen and (max-width: 768px) {
-    #about h2.section-heading {
-        font-size: 3rem;
-    }
-    
-    /* BeerNext Intro Paragraph */
-    #about, p {
-        font-size: 15px;
   
+  .slider:hover {
+      opacity: 1;
+  }
+  
+  input[type = "range"] {
+      width: 1000px;
+      margin: auto;
+      display: block;
+      margin-top: 5%;
+  }
+  
+  input[type = "image"] {
+      max-width: 100%;
+      height: auto;
+      margin-left: 25%;
+      display: block;
+      position: relative;
+      border: none;
+      outline: none;
+  } 
+  
+  
+  
+  
+  
+  /* Dropdowns: Beer Strength and Beer Style */
+  
+  .form-group#beerstrength {
+      margin-top: 5%;
+  }
+  
+  #selStrength {
+      width: 70%;
+      height: 50px;
+      border-radius:3px;
+      min-height:10px !important;
+      border:1px solid #bcbcbc;
+     
+  }
+  
+  .form-control {
+      font-size: 18px;
+  }
+  
+  select {
+      font-family: "Cinzel";
+  }
+  
+  
+  
+  
+  
+  /* MAP SECTION */
+.container-fluid h2.subsection-heading-4 {
+      font-size: 4rem;
+      font-family: "Cinzel";
+      width: 100%;
+      margin-top: 3%;
+  }
+  
+  #map {
+  
+      position: relative;
+      border-radius: 30px;
+      height: 700px;
+      width: 100%;  
+      margin-top: 5%;
+      overflow: hidden;
+  }
+  
+  .container-fluid#map-section {
+      margin-top: 0%;
+  }
+
+  
+  /* Country Autocomplete Styling */
+  
+  body {
+    font: 18px "Cinzel";
+  }
+  .autocomplete {
+    /*the container must be positioned relative:*/
+    position: relative;
+    display: inline-block;
+    margin-top: 0%;
+  }
+  input {
+    border:1px solid #b0bec5;
+  
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 18px;
+  }
+  input[type=text] {
+    background-color: #fcfdff;
+    width: 100%;
+  }
+  input[type=submit] {
+    background-color: DodgerBlue;
+    color: #fff;
+  }
+  .autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+  }
+  .autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: #e9e9e9;
+  }
+  .autocomplete-active {
+      /*when navigating through the items using the arrow keys:*/
+      background-color: DodgerBlue !important;
+      color: #ffffff;
     }
-    #features h2.subsection-heading {
-        font-size: 3rem;
+  
+  /* Media Queries Section */ 
+  
+  
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+  
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
     }
-    .text-muted {
-        font-size: 15px;  
+  }
+  
+  @media only screen and (min-width: 768px) {
+      /* For desktop: */
+      .col-1 {width: 8.33%;}
+      .col-2 {width: 16.66%;}
+      .col-3 {width: 25%;}
+      .col-4 {width: 33.33%;}
+      .col-5 {width: 41.66%;}
+      .col-6 {width: 50%;}
+      .col-7 {width: 58.33%;}
+      .col-8 {width: 66.66%;}
+      .col-9 {width: 75%;}
+      .col-10 {width: 83.33%;}
+      .col-11 {width: 91.66%;}
+      .col-12 {width: 100%;}
+    }
+  
+  /* Media Queries */
+  
+  @media screen and (max-width: 880px) {
+      .subheading {
+          font-size: 40px;
+      }
+      .subheading-1 {
+          font-size: 20px;
+      }
+  }
+
+  @media screen and (max-width: 605px) {
+        .subheading {
+            font-size: 30px;
+    }
+        .subheading-1 {
+            font-size: 18px;
     }
 
-    .container-fluid#preferences {
-        height: 170%;
-    }
-    button.btn {
-        margin-top: 5%;
-    }
-    .row h3.subsection-heading-3 {
-        margin-left: 0.5%;    
-    }
-    label#ranking {
-        margin-left: 0.5%;
-    }
-    .form-group#taste-rank .slider {
-        margin-left:0.5%;
-    }
-    .form-group#aroma-rank .slider {
-        margin-left:0.5%;
-    }
-    .form-group#appearance-rank .slider {
-        margin-left:0.5%;
-    }
-    p {
-        margin-top: 0px;
-    } 
-
-}
-
-
-
-
-
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+      #about h2.section-heading {
+          font-size: 3rem;
+      }
+      
+      /* BeerNext Intro Paragraph */
+      #about, p {
+          font-size: 15px;
+    
+      }
+      #features h2.subsection-heading {
+          font-size: 3rem;
+      }
+      .text-muted {
+          font-size: 15px;  
+      }
+  
+      .container-fluid#preferences {
+          height: 170%;
+      }
+      button.btn {
+          margin-top: 5%;
+      }
+      .row h3.subsection-heading-3 {
+          margin-left: 0.5%;    
+      }
+      label#ranking {
+          margin-left: 0.5%;
+      }
+      .form-group#taste-rank .slider {
+          margin-left:0.5%;
+      }
+      .form-group#aroma-rank .slider {
+          margin-left:0.5%;
+      }
+      .form-group#appearance-rank .slider {
+          margin-left:0.5%;
+      }
+      p {
+          margin-top: 0px;
+      } 
+  
+  }
+  
+  
+  
+  
+  
+  
