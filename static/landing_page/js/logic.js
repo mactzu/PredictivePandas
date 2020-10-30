@@ -401,23 +401,41 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
   accessToken: API_KEY
   }).addTo(myMap);
 
-function getBeer() {
+try {
+  getBeer(data)
+}
+catch(err) {}
+
+function getBeer(data) {
   myFeatureBeers.clearLayers();
 
-  for (var i = 0; i < 5; i += 1) {
-    test = "test " + i;
-    marker = L.marker(getRandomLatLng(),{icon: beerIcon}).addTo(myFeatureBeers).bindPopup("Marker " + test);
-    marker.test = test;
+  for (var i = 0; i < data.length; i += 1) {
+    let url="/data/"+data[i]
+    d3.json(url).then(function(d) {
+      lat=d[0].lat;
+      lng=d[0].lng;
+      address=d[0].address;
+      availability=d[0].availability;
+      abv=d[0].beer_abv;
+      strength=d[0].beer_strength;
+      style=d[0].beer_style;
+      brewery=d[0].brewery_name;
+      country=d[0].country;
+      description=d[0].description.slice(0,5);
+      marker = L.marker([lat,lng],{icon: beerIcon}).addTo(myFeatureBeers).bindPopup("Marker " + description);
+      marker.test = test;
+    })
+    
   }
 
-  function getRandomLatLng() {
-    return [
-      45 + 60 * Math.random() - 25,
-      -30 + 100 * Math.random() - 50
-    ]
-  }  
+  // function getRandomLatLng() {
+  //   return [
+  //     45 + 60 * Math.random() - 25,
+  //     -30 + 100 * Math.random() - 50
+  //   ]
+  // }  
 
-  myMap.fitBounds(myFeatureBeers.getBounds());
+  //myMap.fitBounds(myFeatureBeers.getBounds());
 
 }
 

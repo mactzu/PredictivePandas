@@ -95,9 +95,13 @@ def beer(beerid):
         for row in data:
             if row[2]==beerid:
                 descriptor=[]
+                count=[]
                 for col in range(14,189):
                     if int(row[col])>1:
-                        descriptor.append({data_header[col]:row[col]})
+                        descriptor.append(data_header[col])
+                        count.append(int(row[col]))
+                keydict=dict(zip(descriptor,count))
+                descriptor.sort(key=keydict.get,reverse=True)
                 beerdata.append({
                     "brewery_id":row[0],
                     "brewery_name":row[1],
