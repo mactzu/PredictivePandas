@@ -56,7 +56,7 @@ When starting out on this project we were told to 'pick something we were passio
    * [images](./static/images)
    * [js](./static/js)
  * [templates](/templates)
- * [.DS_Store](./DS_Store)
+ * [.DS_Store](./.DS_Store)
  * [.gitignore](./.gitignore)
  * [README.md](./README.md)
  * [app.py](./app.py)
