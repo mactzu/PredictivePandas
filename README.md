@@ -35,7 +35,9 @@
 <!-- USAGE EXAMPLE -->
 ## Usage
 
+Click on the link to explore and interact with our [App](https://nextbeer.herokuapp.com/)
 
+![App](/static/images/app.gif)
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
