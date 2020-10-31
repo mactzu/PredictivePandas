@@ -261,7 +261,7 @@ body, html {
       width: 100px;
       height: 100px;
       border: 0;
-      background-image: url("https://raw.githubusercontent.com/mactzu/PredictivePandas/main/static/images/slider.png");
+      background-image: url("/static/images/slider.png");
       background-size: contain;
       background-position: center center;
       background-repeat: no-repeat;
@@ -272,7 +272,7 @@ body, html {
       width: 150px;
       height: 150px;
       border: 0;
-      background: url("https://raw.githubusercontent.com/mactzu/PredictivePandas/main/static/images/slider.png");
+      background: url("/static/images/slider.png");
       cursor: pointer;
   }
   
