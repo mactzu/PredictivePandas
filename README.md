@@ -63,6 +63,7 @@ The beer recommender model is built using review scores, review words, and beer 
  * [README.md](./README.md)
  * [app.py](./app.py)
  * [requirements.txt](./requirements.txt)
+ * [runtime.txt](./runtime.txt)
 
 
 ### Built With
