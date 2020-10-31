@@ -81,6 +81,7 @@ The beer recommender model is built using review scores, review words, and beer 
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/javascript)
   * [d3.js](https://d3js.org/)
   * [Leaflet](https://leafletjs.com/)
+  * [tagcompelte](https://github.com/razzbee/tagcomplete)
 
 
 <!-- GETTING STARTED -->
