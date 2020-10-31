@@ -79,6 +79,7 @@ When starting out on this project we were told to 'pick something we were passio
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/javascript)
   * [d3.js](https://d3js.org/)
   * [Leaflet](https://leafletjs.com/)
+  * [tagcomplete](https://github.com/razzbee/tagcomplete)
 
 
 <!-- GETTING STARTED -->
