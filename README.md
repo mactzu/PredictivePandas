@@ -21,6 +21,7 @@
 ## Table of Contents
 
 * [About the Project](#about-the-project)
+* [About the Model](#about-the-model)
   * [Built With](#built-with)
 * [Project Tree](#project-tree)
 * [Usage Example](#usage)
@@ -40,24 +41,25 @@
 ## About The Project
 When starting out on this project we were told to 'pick something we were passionate about'.  Well, that was easy - food and alcohol ... some of the greatest joys in life, right?  We knew we wanted to create a recommendation engine and as we started looking around we found plenty.  Restaurant recommenders, cuisine recommenders, locality based recommenders and of course the wine recommenders.  But what about beer?  Not too many out there.  Whilst worldwide beer consumption is on the decline, the interest in craft beer is surging.  Driven by passionate home brewers and craft beer makers, together with increasingly more sophisticated beer drinkers, the choices are growing and exponentially.  So how do you find that illusive 'best' beer when you don't even know it's out there?  That's where our model comes in.
 
+<!-- ABOUT THE MODEL -->
+## About The Model
+The beer recommender model is built using review scores, review words, and beer characteristics sourced from [dataworld](https://data.world/socialmediadata/beeradvocate#) and [beer advocate](https://www.beeradvocate.com/). A K-means clustering model was used to assign unique beers into clusters, and a collaborative filtering approach was used to build a recommender that will recommend beers based on users' desired beer characteristics.
 
 <!-- PROJECT TREE -->
 ## Project Tree
 
 * [config](/config) 
-* [data](/data)
-* [notebooks](/notebooks)
+* [data](/data) - cleaned data and flat file database
+* [notebooks](/notebooks) - for data cleaning and model testing - not necessary for running the app
    * [00_DataExtract-Clean](./notebooks/00_DataExtract-Clean.ipynb)
    * [01_DataPrep-ML](./notebooks/01_DataPrep-ML.ipynb)
    * [02_K-Means](./notebooks/02_K-Means.ipynb)
-* [source](/source)
+* [source](/source) - original data sources
 * [static](/static)
    * [css](./static/css)
    * [images](./static/images)
    * [js](./static/js)
  * [templates](/templates)
- * [.DS_Store](./.DS_Store)
- * [.gitignore](./.gitignore)
  * [README.md](./README.md)
  * [app.py](./app.py)
  * [requirements.txt](./requirements.txt)
@@ -79,7 +81,6 @@ When starting out on this project we were told to 'pick something we were passio
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/javascript)
   * [d3.js](https://d3js.org/)
   * [Leaflet](https://leafletjs.com/)
-  * [tagcomplete](https://github.com/razzbee/tagcomplete)
 
 
 <!-- GETTING STARTED -->
